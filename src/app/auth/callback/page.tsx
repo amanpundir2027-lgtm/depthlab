@@ -1,2 +1,32 @@
-'use client';import {useEffect,useState} from 'react';import {useAccount} from '@/components/Providers';
-export default function Callback(){const{db}=useAccount();const[msg,setMsg]=useState('Confirming sign-in…');useEffect(()=>{const code=new URLSearchParams(location.search).get('code');if(!db){setMsg('Sign-in is not configured.');return}if(code){db.auth.exchangeCodeForSession(code).then(({error})=>{if(error)setMsg(error.message);else location.replace('/')});return}db.auth.getSession().then(({data,error})=>{if(error||!data.session)setMsg('The sign-in link is invalid or expired.');else location.replace('/')})},[db]);return <div className="panel"><h1>Signing in</h1><p>{msg}</p></div>}
+"use client";
+import { useEffect, useState } from "react";
+import { useAccount } from "@/components/Providers";
+export default function Callback() {
+  const { db } = useAccount();
+  const [msg, setMsg] = useState("Confirming sign-in…");
+  useEffect(() => {
+    const code = new URLSearchParams(location.search).get("code");
+    if (!db) {
+      setMsg("Sign-in is not configured.");
+      return;
+    }
+    if (code) {
+      db.auth.exchangeCodeForSession(code).then(({ error }) => {
+        if (error) setMsg(error.message);
+        else location.replace("/");
+      });
+      return;
+    }
+    db.auth.getSession().then(({ data, error }) => {
+      if (error || !data.session)
+        setMsg("The sign-in link is invalid or expired.");
+      else location.replace("/");
+    });
+  }, [db]);
+  return (
+    <div className="panel">
+      <h1>Signing in</h1>
+      <p>{msg}</p>
+    </div>
+  );
+}

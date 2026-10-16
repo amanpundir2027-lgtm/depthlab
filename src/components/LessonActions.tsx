@@ -1,3 +1,79 @@
-'use client';
-import {useEffect,useState} from 'react';import {useAccount} from './Providers';
-export function LessonActions({slug}:{slug:string}){const {user,db}=useAccount();const[note,setNote]=useState('');const[message,setMessage]=useState('');const[id,setId]=useState<string>();useEffect(()=>{if(!db||!user)return;db.from('notes').select('id,body').eq('module_id',slug).order('updated_at',{ascending:false}).limit(1).maybeSingle().then(({data})=>{if(data){setNote(data.body);setId(data.id)}})},[db,user,slug]);async function save(){if(!db||!user)return;const record={user_id:user.id,module_id:slug,body:note,updated_at:new Date().toISOString()};const query=id?db.from('notes').update(record).eq('id',id):db.from('notes').insert(record);const {data,error}=await query.select('id').single();setMessage(error?'Could not save your note.': 'Note saved.');if(data)setId(data.id)}return <div className="panel"><h3>Your notes</h3>{user?<><textarea aria-label="Lesson note" value={note} onChange={e=>setNote(e.target.value)} placeholder="What do you understand? What remains unclear?" maxLength={10000}/><button className="button" onClick={save}>Save note</button>{id&&<button className="button ghost" onClick={async()=>{if(!db)return;const {error}=await db.from('notes').delete().eq('id',id);if(!error){setId(undefined);setNote('');setMessage('Note deleted.')}}}>Delete</button>}{message&&<p role="status">{message}</p>}</>:<p><a href="/login">Sign in</a> to save notes and progress.</p>}</div>}
+"use client";
+import { useEffect, useState } from "react";
+import { useAccount } from "./Providers";
+export function LessonActions({ slug }: { slug: string }) {
+  const { user, db } = useAccount();
+  const [note, setNote] = useState("");
+  const [message, setMessage] = useState("");
+  const [id, setId] = useState<string>();
+  useEffect(() => {
+    if (!db || !user) return;
+    db.from("notes")
+      .select("id,body")
+      .eq("module_id", slug)
+      .order("updated_at", { ascending: false })
+      .limit(1)
+      .maybeSingle()
+      .then(({ data }) => {
+        if (data) {
+          setNote(data.body);
+          setId(data.id);
+        }
+      });
+  }, [db, user, slug]);
+  async function save() {
+    if (!db || !user) return;
+    const record = {
+      user_id: user.id,
+      module_id: slug,
+      body: note,
+      updated_at: new Date().toISOString(),
+    };
+    const query = id
+      ? db.from("notes").update(record).eq("id", id)
+      : db.from("notes").insert(record);
+    const { data, error } = await query.select("id").single();
+    setMessage(error ? "Could not save your note." : "Note saved.");
+    if (data) setId(data.id);
+  }
+  return (
+    <div className="panel">
+      <h3>Your notes</h3>
+      {user ? (
+        <>
+          <textarea
+            aria-label="Lesson note"
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            placeholder="What do you understand? What remains unclear?"
+            maxLength={10000}
+          />
+          <button className="button" onClick={save}>
+            Save note
+          </button>
+          {id && (
+            <button
+              className="button ghost"
+              onClick={async () => {
+                if (!db) return;
+                const { error } = await db.from("notes").delete().eq("id", id);
+                if (!error) {
+                  setId(undefined);
+                  setNote("");
+                  setMessage("Note deleted.");
+                }
+              }}
+            >
+              Delete
+            </button>
+          )}
+          {message && <p role="status">{message}</p>}
+        </>
+      ) : (
+        <p>
+          <a href="/login">Sign in</a> to save notes and progress.
+        </p>
+      )}
+    </div>
+  );
+}

@@ -1,6 +1,46 @@
-import { createClient } from '@supabase/supabase-js';
-export function browserDb(){const url=process.env.NEXT_PUBLIC_SUPABASE_URL;const key=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;if(!url||!key)return null;return createClient(url,key)}
-export function requestDb(token:string){const url=process.env.NEXT_PUBLIC_SUPABASE_URL;const key=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;if(!url||!key)return null;return createClient(url,key,{global:{headers:{Authorization:`Bearer ${token}`}},auth:{persistSession:false,autoRefreshToken:false}})}
-export async function authorized(req:Request){const token=req.headers.get('authorization')?.replace(/^Bearer /,'');if(!token)return null;const db=requestDb(token);if(!db)return null;const {data,error}=await db.auth.getUser(token);return error||!data.user?null:{db,user:data.user}}
-export async function limit(db:NonNullable<ReturnType<typeof requestDb>>,userId:string,bucket:string,max:number){const {data,error}=await db.rpc('consume_limit',{p_user:userId,p_bucket:bucket,p_max:max,p_window_seconds:3600});return !error&&data===true}
-export function serverDb(){const url=process.env.NEXT_PUBLIC_SUPABASE_URL;const key=process.env.SUPABASE_SERVICE_ROLE_KEY;if(!url||!key)return null;return createClient(url,key,{auth:{persistSession:false,autoRefreshToken:false}})}
+import { createClient } from "@supabase/supabase-js";
+export function browserDb() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !key) return null;
+  return createClient(url, key);
+}
+export function requestDb(token: string) {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !key) return null;
+  return createClient(url, key, {
+    global: { headers: { Authorization: `Bearer ${token}` } },
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+}
+export async function authorized(req: Request) {
+  const token = req.headers.get("authorization")?.replace(/^Bearer /, "");
+  if (!token) return null;
+  const db = requestDb(token);
+  if (!db) return null;
+  const { data, error } = await db.auth.getUser(token);
+  return error || !data.user ? null : { db, user: data.user };
+}
+export async function limit(
+  db: NonNullable<ReturnType<typeof requestDb>>,
+  userId: string,
+  bucket: string,
+  max: number,
+) {
+  const { data, error } = await db.rpc("consume_limit", {
+    p_user: userId,
+    p_bucket: bucket,
+    p_max: max,
+    p_window_seconds: 3600,
+  });
+  return !error && data === true;
+}
+export function serverDb() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) return null;
+  return createClient(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+}

@@ -1,4 +1,36 @@
-export type Level='insufficient'|'partial'|'demonstrated';
-export type Feedback={accuracy:Level;reasoning:Level;limitations:Level;application:Level;comments:Record<string,string>;correction:string;nextReview:string};
-export function decideState(feedback:Feedback,previousDemonstrations=0,delayed=false){const levels=[feedback.accuracy,feedback.reasoning,feedback.limitations,feedback.application];if(levels.includes('insufficient'))return 'needs_review';if(levels.every(x=>x==='demonstrated'))return delayed&&previousDemonstrations>=1?'mastered':'demonstrated';return 'practicing'}
-export function reviewDays(feedback:Feedback){return Object.values(feedback).filter(x=>x==='insufficient').length?1:feedback.accuracy==='demonstrated'&&feedback.reasoning==='demonstrated'&&feedback.limitations==='demonstrated'&&feedback.application==='demonstrated'?7:3}
+export type Level = "insufficient" | "partial" | "demonstrated";
+export type Feedback = {
+  accuracy: Level;
+  reasoning: Level;
+  limitations: Level;
+  application: Level;
+  comments: Record<string, string>;
+  correction: string;
+  nextReview: string;
+};
+export function decideState(
+  feedback: Feedback,
+  previousDemonstrations = 0,
+  delayed = false,
+) {
+  const levels = [
+    feedback.accuracy,
+    feedback.reasoning,
+    feedback.limitations,
+    feedback.application,
+  ];
+  if (levels.includes("insufficient")) return "needs_review";
+  if (levels.every((x) => x === "demonstrated"))
+    return delayed && previousDemonstrations >= 1 ? "mastered" : "demonstrated";
+  return "practicing";
+}
+export function reviewDays(feedback: Feedback) {
+  return Object.values(feedback).filter((x) => x === "insufficient").length
+    ? 1
+    : feedback.accuracy === "demonstrated" &&
+        feedback.reasoning === "demonstrated" &&
+        feedback.limitations === "demonstrated" &&
+        feedback.application === "demonstrated"
+      ? 7
+      : 3;
+}

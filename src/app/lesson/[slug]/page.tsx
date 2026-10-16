@@ -1,2 +1,91 @@
-import {getLesson} from '@/lib/curriculum';import {notFound} from 'next/navigation';import {LessonActions} from '@/components/LessonActions';
-export default async function LessonPage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const lesson=getLesson(slug);if(!lesson)notFound();return <><a href="/library" className="muted">← Library</a><div className="eyebrow" style={{marginTop:24}}>{lesson.subject} · {lesson.minutes} min · Draft · Source claims awaiting review</div><h1>{lesson.question}</h1><div className="row"><a className="button" href={`/discuss/${slug}`}>Discuss draft lesson →</a><a className="button secondary" href="#practice">Written practice</a></div><div className="two section"><article className="panel lesson-copy"><h2>{lesson.title}</h2>{lesson.explanation.map((p,i)=><p key={i}>{p}</p>)}<h3>Worked example</h3><p>{lesson.example}</p><h3>Where the idea stops</h3><p>{lesson.limitation}</p><h3>Connect it</h3><p>{lesson.connection}</p><h3>Go deeper</h3><p>Compare the explanation above with the linked source. Identify one assumption you would test before using this idea in a new setting.</p><h3>Source to examine</h3>{lesson.sources.map(s=><p key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.title} ↗</a></p>)}</article><aside className="stack"><div className="panel"><h3>What you will learn</h3><ul>{lesson.objectives.map(x=><li key={x}>{x}</li>)}</ul><p className="muted">Prerequisite: {lesson.title==='Arguments and reasons'||lesson.title==='Evidence and hypotheses'?'None':'Previous lesson in this path'}</p></div><LessonActions slug={slug}/></aside></div><div id="practice" className="panel"><div className="eyebrow">Practice</div><h2>Test the idea</h2><p>{lesson.exercise}</p><ol>{lesson.questions.map(q=><li key={q}>{q}</li>)}</ol><p>Use the discussion screen to submit a teach-back and application answer for feedback.</p></div></>}
+import { getLesson } from "@/lib/curriculum";
+import { notFound } from "next/navigation";
+import { LessonActions } from "@/components/LessonActions";
+export default async function LessonPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const lesson = getLesson(slug);
+  if (!lesson) notFound();
+  return (
+    <>
+      <a href="/library" className="muted">
+        ← Library
+      </a>
+      <div className="eyebrow" style={{ marginTop: 24 }}>
+        {lesson.subject} · {lesson.minutes} min · Draft · Source claims awaiting
+        review
+      </div>
+      <h1>{lesson.question}</h1>
+      <div className="row">
+        <a className="button" href={`/discuss/${slug}`}>
+          Discuss draft lesson →
+        </a>
+        <a className="button secondary" href="#practice">
+          Written practice
+        </a>
+      </div>
+      <div className="two section">
+        <article className="panel lesson-copy">
+          <h2>{lesson.title}</h2>
+          {lesson.explanation.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+          <h3>Worked example</h3>
+          <p>{lesson.example}</p>
+          <h3>Where the idea stops</h3>
+          <p>{lesson.limitation}</p>
+          <h3>Connect it</h3>
+          <p>{lesson.connection}</p>
+          <h3>Go deeper</h3>
+          <p>
+            Compare the explanation above with the linked source. Identify one
+            assumption you would test before using this idea in a new setting.
+          </p>
+          <h3>Source to examine</h3>
+          {lesson.sources.map((s) => (
+            <p key={s.url}>
+              <a href={s.url} target="_blank" rel="noreferrer">
+                {s.title} ↗
+              </a>
+            </p>
+          ))}
+        </article>
+        <aside className="stack">
+          <div className="panel">
+            <h3>What you will learn</h3>
+            <ul>
+              {lesson.objectives.map((x) => (
+                <li key={x}>{x}</li>
+              ))}
+            </ul>
+            <p className="muted">
+              Prerequisite:{" "}
+              {lesson.title === "Arguments and reasons" ||
+              lesson.title === "Evidence and hypotheses"
+                ? "None"
+                : "Previous lesson in this path"}
+            </p>
+          </div>
+          <LessonActions slug={slug} />
+        </aside>
+      </div>
+      <div id="practice" className="panel">
+        <div className="eyebrow">Practice</div>
+        <h2>Test the idea</h2>
+        <p>{lesson.exercise}</p>
+        <ol>
+          {lesson.questions.map((q) => (
+            <li key={q}>{q}</li>
+          ))}
+        </ol>
+        <p>
+          Use the discussion screen to submit a teach-back and application
+          answer for feedback.
+        </p>
+      </div>
+    </>
+  );
+}
