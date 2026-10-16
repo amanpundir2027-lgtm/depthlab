@@ -46,6 +46,7 @@ export function Conversation({ lesson }: { lesson: Lesson }) {
   const msgRef = useRef<Message[]>([]);
   const assembler = useRef(new TurnAssembler());
   const lastReply = useRef("");
+  const interruptedReply = useRef(false);
   const stageRef = useRef<Stage>("ready");
   const sessionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
@@ -103,7 +104,8 @@ export function Conversation({ lesson }: { lesson: Lesson }) {
     async (text: string) => {
       const answer = text.trim();
       if (!answer || !db || !user) return;
-      if (stageRef.current === "speaking") {
+      if (stageRef.current === "speaking" || interruptedReply.current) {
+        interruptedReply.current = false;
         msgRef.current = msgRef.current.slice(0, -1);
         setMessages(msgRef.current);
       }
@@ -118,6 +120,11 @@ export function Conversation({ lesson }: { lesson: Lesson }) {
       append({ role: "user", content: answer });
       setStage("thinking");
       const snapshot = msgRef.current;
+      if (retain && sessionId)
+        await db
+          .from("tutor_sessions")
+          .update({ messages: snapshot })
+          .eq("id", sessionId);
       const controller = new AbortController();
       generation.current = controller;
       try {
@@ -157,6 +164,7 @@ export function Conversation({ lesson }: { lesson: Lesson }) {
     assembler.current.onTranscript = (text) => {
       setCaption(text);
       if (text && stageRef.current === "speaking") {
+        interruptedReply.current = true;
         stopSpeech();
         setStage("transcribing");
       }
@@ -354,11 +362,37 @@ export function Conversation({ lesson }: { lesson: Lesson }) {
               <button className="button ghost" onClick={end}>
                 End session
               </button>
+              {sessionId && (
+                <button
+                  className="button ghost"
+                  onClick={async () => {
+                    if (!db || !confirm("Delete this saved session record?"))
+                      return;
+                    await end();
+                    const { error } = await db
+                      .from("tutor_sessions")
+                      .delete()
+                      .eq("id", sessionId);
+                    if (error)
+                      setError("Could not delete this session. Try again.");
+                    else {
+                      setSessionId(undefined);
+                      msgRef.current = [];
+                      setMessages([]);
+                      setError("Session record deleted.");
+                    }
+                  }}
+                >
+                  Delete this session
+                </button>
+              )}
             </div>
             <div className="row" style={{ marginTop: 12 }}>
               <button
                 className="button ghost"
                 onClick={() => {
+                  if (stageRef.current === "speaking")
+                    interruptedReply.current = true;
                   stopSpeech();
                   setStage("paused");
                 }}
@@ -368,6 +402,8 @@ export function Conversation({ lesson }: { lesson: Lesson }) {
               <button
                 className="button ghost"
                 onClick={() => {
+                  if (stageRef.current === "speaking")
+                    interruptedReply.current = true;
                   setTutorMuted(!tutorMuted);
                   stopSpeech();
                 }}

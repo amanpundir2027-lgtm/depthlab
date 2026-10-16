@@ -1,6 +1,6 @@
 # Depth Lab
 
-A learning companion prototype built with Next.js, Supabase, Deepgram, and a configurable OpenAI text model. The 14 subjects and 84 module sequence are mapped. Twelve lesson records are **drafts**; none has completed source review or the required six-source pack per subject, so there are **zero published modules**.
+A learning companion prototype built with Next.js, Supabase, Deepgram, and a configurable OpenAI text model. The 14 subjects and 84 module sequence are mapped. Twelve lesson records are **drafts**; twelve reference links have been checked (six per draft subject), but claim-level review, source variety, and source packs for the other subjects remain incomplete. There are **zero published modules**.
 
 ## Local development
 
@@ -18,4 +18,4 @@ The tutor API caps calls at 100 per user per hour and assessment at 20 per user 
 
 ## Deployment status
 
-No Vercel project or Supabase/Deepgram/OpenAI credentials were available in the development environment when this prototype was created. A build passing locally does not prove production voice, auth, writes, usage, mobile audio, or isolation. The content also needs source checking and expansion before publication. Do not describe this as a completed voice-led release until live acceptance checks pass.
+A new Vercel project is connected to this repository, and an authenticated preview deployment is ready. Supabase, Deepgram, and OpenAI credentials were not yet configured when this note was last updated. A working preview build does not prove production voice, auth, writes, usage, mobile audio, or isolation. The content also needs source checking and expansion before publication. Do not describe this as a completed voice-led release until live acceptance checks pass.
