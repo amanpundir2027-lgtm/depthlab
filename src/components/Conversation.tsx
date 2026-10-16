@@ -191,7 +191,7 @@ export function Conversation({ lesson }: { lesson: Lesson }) {
       const client = new DeepgramClient({ accessToken: data.token });
       const connection = await client.listen.v1.connect({
         model: "nova-3",
-        language: "en",
+        language: "en-IN",
         interim_results: "true",
         punctuate: "true",
         smart_format: "true",

@@ -46,11 +46,18 @@ export default async function LessonPage({
           </p>
           <h3>Source to examine</h3>
           {lesson.sources.map((s) => (
-            <p key={s.url}>
+            <div key={s.url} className="message">
               <a href={s.url} target="_blank" rel="noreferrer">
                 {s.title} ↗
               </a>
-            </p>
+              <p>
+                {s.author} · {s.type} · Revised {s.revised}
+              </p>
+              <p>{s.whyUseful}</p>
+              <small>
+                Link checked {s.checkedAt} · {s.accessStatus}
+              </small>
+            </div>
           ))}
         </article>
         <aside className="stack">

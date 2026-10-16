@@ -8,6 +8,16 @@ export function LessonActions({ slug }: { slug: string }) {
   const [id, setId] = useState<string>();
   useEffect(() => {
     if (!db || !user) return;
+    db.from("learning_progress")
+      .select("state")
+      .eq("module_id", slug)
+      .maybeSingle()
+      .then(({ data, error }) => {
+        if (!error && !data)
+          db.from("learning_progress")
+            .insert({ user_id: user.id, module_id: slug, state: "reading" })
+            .then(() => {});
+      });
     db.from("notes")
       .select("id,body")
       .eq("module_id", slug)

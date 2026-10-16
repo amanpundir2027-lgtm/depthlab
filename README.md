@@ -12,7 +12,7 @@ Requires Node 24, npm, and a Supabase project. Copy `.env.example` to `.env.loca
 - `SUPABASE_SERVICE_ROLE_KEY`, `DEEPGRAM_API_KEY`, and `OPENAI_API_KEY` are server secrets. Never use `NEXT_PUBLIC_` for them.
 - `OPENAI_MODEL` defaults to `gpt-4.1-mini`; verify model availability and current pricing in the connected account before launch.
 
-A Deepgram Member-level key grants temporary tokens with a default 30-second connection window through the SDK's `auth.v1.tokens.grant()`. This expiry does not close an already connected stream. The app closes a voice connection after 20 minutes and caps token grants at 30 per user per hour. It uses Deepgram Listen V1 Nova-3 with interim and final results. Actual model suitability, provider prices, credit balance, account permissions, and browser WebM compatibility require live verification.
+A Deepgram Member-level key grants temporary tokens with a default 30-second connection window through the SDK's `auth.v1.tokens.grant()`. This expiry does not close an already connected stream. The app closes a voice connection after 20 minutes and caps token grants at 30 per user per hour. It uses Deepgram Listen V1 Nova-3 with `en-IN`, interim and final results. Actual model suitability, provider prices, credit balance, account permissions, and browser WebM compatibility require live verification.
 
 The tutor API caps calls at 100 per user per hour and assessment at 20 per user per hour through a database-backed limit. These are application controls, not provider spending caps. Voice and tutor operations require an authenticated user. Browser speech synthesis has device-dependent voices and can fail; text remains visible. Data retention choices cover app storage, not independently verified provider retention.
 

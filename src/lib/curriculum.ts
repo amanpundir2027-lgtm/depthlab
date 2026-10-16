@@ -1,3 +1,6 @@
+import { sourceCatalog } from "./sources";
+import { lessonExpansions } from "./lessonExpansions";
+
 export type Lesson = {
   slug: string;
   title: string;
@@ -13,7 +16,7 @@ export type Lesson = {
   teachBack: string;
   application: string;
   questions: string[];
-  sources: { title: string; url: string }[];
+  sources: (typeof sourceCatalog)[number][];
 };
 export const paths: Record<string, string[]> = {
   Philosophy: [
@@ -247,7 +250,7 @@ const records: [
     "Draw a simple causal diagram for an everyday claim.",
     "Explain why correlation alone is insufficient and how randomization helps.",
     "A learning app adds voice tutoring and completion rises. How would you test whether voice caused the change?",
-    "https://www.ncbi.nlm.nih.gov/books/NBK24851/",
+    "https://plato.stanford.edu/entries/causation-probabilistic/",
   ],
   [
     "Models and explanation",
@@ -283,7 +286,7 @@ const records: [
     "Compare two conflicting reports by methods, population, and claim.",
     "Explain how to respect expertise while leaving room for revision.",
     "A founder finds one paper contradicting a broad research consensus. How should they decide what to do?",
-    "https://nap.nationalacademies.org/catalog/10613/scientific-research-in-education",
+    "https://plato.stanford.edu/entries/scientific-objectivity/",
   ],
 ];
 export const lessons: Lesson[] = records.map((r, i) => ({
@@ -300,7 +303,15 @@ export const lessons: Lesson[] = records.map((r, i) => ({
     `Apply the idea to a new situation`,
   ],
   minutes: 15,
-  explanation: [r[2]],
+  explanation: [
+    r[2],
+    ...(lessonExpansions[
+      r[0]
+        .toLowerCase()
+        .replaceAll(/[^a-z0-9]+/g, "-")
+        .replace(/-$/, "")
+    ] || []),
+  ],
   example: r[3],
   limitation: r[4],
   connection: r[5],
@@ -313,7 +324,7 @@ export const lessons: Lesson[] = records.map((r, i) => ({
     `Where might this idea fail or be misused?`,
     r[8],
   ],
-  sources: [{ title: new URL(r[9]).hostname, url: r[9] }],
+  sources: sourceCatalog.filter((source) => source.url === r[9]),
 }));
 export function getLesson(slug: string) {
   return lessons.find((x) => x.slug === slug);

@@ -63,21 +63,8 @@ export default function Reviews() {
               <h3>{item.prompt}</h3>
               <div className="row">
                 <a className="button" href={`/discuss/${item.module_id}`}>
-                  Practice again
+                  Answer the review
                 </a>
-                <button
-                  className="button secondary"
-                  onClick={async () => {
-                    if (!db) return;
-                    const { error } = await db
-                      .from("review_tasks")
-                      .update({ completed_at: new Date().toISOString() })
-                      .eq("id", item.id);
-                    if (!error) setItems(items.filter((x) => x.id !== item.id));
-                  }}
-                >
-                  Mark reviewed
-                </button>
               </div>
             </div>
           ))}
