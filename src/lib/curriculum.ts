@@ -108,14 +108,6 @@ export const paths: Record<string, string[]> = {
     "Limitations",
     "Societal implications",
   ],
-  "Art and Design": [
-    "Visual elements",
-    "Composition",
-    "Context",
-    "Communication",
-    "Usability",
-    "Critique",
-  ],
   "Culture and Society": [
     "Norms",
     "Identity",
@@ -123,14 +115,6 @@ export const paths: Record<string, string[]> = {
     "Power",
     "Media",
     "Social change",
-  ],
-  Music: [
-    "Rhythm",
-    "Melody",
-    "Harmony",
-    "Form",
-    "Listening",
-    "Cultural context",
   ],
 };
 const records: [

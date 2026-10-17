@@ -11,6 +11,32 @@ const slug = (s) =>
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replace(/-$/, "");
+// Retire these curriculum entries without changing learner-owned records.
+for (const subjectId of ["art-and-design", "music"]) {
+  const { data: modules, error: lookupError } = await db
+    .from("modules")
+    .select("id")
+    .eq("subject_id", subjectId);
+  if (lookupError) throw lookupError;
+  const moduleIds = modules.map(({ id }) => id);
+  if (moduleIds.length) {
+    const { error: linkError } = await db
+      .from("module_sources")
+      .delete()
+      .in("module_id", moduleIds);
+    if (linkError) throw linkError;
+    const { error: moduleError } = await db
+      .from("modules")
+      .delete()
+      .eq("subject_id", subjectId);
+    if (moduleError) throw moduleError;
+  }
+  const { error: subjectError } = await db
+    .from("subjects")
+    .delete()
+    .eq("id", subjectId);
+  if (subjectError) throw subjectError;
+}
 for (const [i, [title, modules]] of Object.entries(paths).entries()) {
   const id = slug(title);
   const { error: subjectError } = await db

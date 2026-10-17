@@ -8,7 +8,7 @@ export default function Library() {
       <div className="eyebrow">The library</div>
       <h1>Follow a question further.</h1>
       <p className="lead">
-        84 draft lessons across 14 subjects. Philosophy and Science have checked
+        72 draft lessons across 12 subjects. Philosophy and Science have checked
         source links; source research for the other paths is in progress.
       </p>
       <div className="field">

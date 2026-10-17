@@ -1,6 +1,6 @@
 # Depth Lab
 
-A learning companion prototype built with Next.js, Supabase, Deepgram, and a configurable OpenAI text model. All 14 subjects have six modules and **84 draft lessons**. Twelve reference links have been checked for Philosophy and Science; the other 72 drafts still need source research. Claim-level review, source variety, and editorial expansion remain incomplete. There are **zero published modules**.
+A learning companion prototype built with Next.js, Supabase, Deepgram, and a configurable OpenAI text model. All 12 subjects have six modules and **72 draft lessons**. Twelve reference links have been checked for Philosophy and Science; the other 60 drafts still need source research. Claim-level review, source variety, and editorial expansion remain incomplete. There are **zero published modules**.
 
 ## Local development
 
@@ -20,4 +20,4 @@ The tutor API caps calls at 100 per user per hour and assessment at 20 per user 
 
 ## Deployment status
 
-The public Vercel site is live at https://depthlab-one.vercel.app. The project is connected to a Supabase free-plan resource. The waitlist and core learning-data migrations have been applied; the repeatable seed contains 14 subjects, 84 draft modules, and 12 source records. A production waitlist signup and separate-user note/progress isolation were verified with temporary records, then cleaned up. Supabase Auth's Site URL and production callback URL are configured; a generated magic link was verified to redirect to the production callback, and the user confirmed delivery and sign-in through a real inbox. Deepgram and OpenAI credentials are not configured, and production voice, usage, and mobile audio have not passed live acceptance checks. The ₹499/month payment gateway is not integrated. The content needs source checking and expansion before publication.
+The public Vercel site is live at https://depthlab-one.vercel.app. The project is connected to a Supabase free-plan resource. The waitlist and core learning-data migrations have been applied; the repeatable seed contains 12 subjects, 72 draft modules, and 12 source records. A production waitlist signup and separate-user note/progress isolation were verified with temporary records, then cleaned up. Supabase Auth's Site URL and production callback URL are configured; a generated magic link was verified to redirect to the production callback, and the user confirmed delivery and sign-in through a real inbox. Deepgram and OpenAI credentials are not configured, and production voice, usage, and mobile audio have not passed live acceptance checks. The ₹499/month payment gateway is not integrated. The content needs source checking and expansion before publication.

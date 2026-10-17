@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { lessons, paths } from "./curriculum";
+import { getLesson, lessons, paths } from "./curriculum";
 import { sourceCatalog } from "./sources";
 
 describe("curriculum integrity", () => {
-  it("maps fourteen six-module paths with unique lesson IDs", () => {
-    expect(Object.keys(paths)).toHaveLength(14);
+  it("maps twelve six-module paths with unique lesson IDs", () => {
+    expect(Object.keys(paths)).toHaveLength(12);
     expect(Object.values(paths).every((modules) => modules.length === 6)).toBe(
       true,
     );
@@ -13,7 +13,7 @@ describe("curriculum integrity", () => {
     );
   });
   it("provides one distinct draft for every mapped module", () => {
-    expect(lessons).toHaveLength(84);
+    expect(lessons).toHaveLength(72);
     for (const [subject, modules] of Object.entries(paths)) {
       for (const title of modules) {
         const matches = lessons.filter(
@@ -25,6 +25,12 @@ describe("curriculum integrity", () => {
         expect(matches[0].exercise).toBeTruthy();
       }
     }
+  });
+  it("excludes the retired subjects and their lesson routes", () => {
+    expect(paths).not.toHaveProperty("Music");
+    expect(paths).not.toHaveProperty("Art and Design");
+    expect(getLesson("music-rhythm")).toBeUndefined();
+    expect(getLesson("art-and-design-visual-elements")).toBeUndefined();
   });
   it("keeps checked source claims attached only to researched drafts", () => {
     for (const lesson of lessons.filter((x) => x.sources.length)) {

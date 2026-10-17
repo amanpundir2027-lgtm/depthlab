@@ -50,7 +50,7 @@ export default function Home() {
       </section>
       <section className="section">
         <div className="eyebrow">Start here</div>
-        <h2>Explore all 14 subjects</h2>
+        <h2>Explore all 12 subjects</h2>
         <p className="muted">
           Six draft lessons in each path. Source review is still in progress.
         </p>
