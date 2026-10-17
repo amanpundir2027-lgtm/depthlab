@@ -15,8 +15,10 @@ export default async function LessonPage({
         ← Library
       </a>
       <div className="eyebrow" style={{ marginTop: 24 }}>
-        {lesson.subject} · {lesson.minutes} min · Draft · Source claims awaiting
-        review
+        {lesson.subject} · {lesson.minutes} min · Draft ·{" "}
+        {lesson.sources.length
+          ? "Source claims awaiting review"
+          : "Sources pending research"}
       </div>
       <h1>{lesson.question}</h1>
       <div className="row">
@@ -41,10 +43,15 @@ export default async function LessonPage({
           <p>{lesson.connection}</p>
           <h3>Go deeper</h3>
           <p>
-            Compare the explanation above with the linked source. Identify one
-            assumption you would test before using this idea in a new setting.
+            Identify one assumption you would test before using this idea in a
+            new setting.
           </p>
-          <h3>Source to examine</h3>
+          <h3>Sources</h3>
+          {lesson.sources.length === 0 && (
+            <p className="muted">
+              Source research and editorial review are pending for this draft.
+            </p>
+          )}
           {lesson.sources.map((s) => (
             <div key={s.url} className="message">
               <a href={s.url} target="_blank" rel="noreferrer">

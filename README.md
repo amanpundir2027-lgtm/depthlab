@@ -1,6 +1,6 @@
 # Depth Lab
 
-A learning companion prototype built with Next.js, Supabase, Deepgram, and a configurable OpenAI text model. The 14 subjects and 84 module sequence are mapped. Twelve lesson records are **drafts**; twelve reference links have been checked (six per draft subject), but claim-level review, source variety, and source packs for the other subjects remain incomplete. There are **zero published modules**.
+A learning companion prototype built with Next.js, Supabase, Deepgram, and a configurable OpenAI text model. All 14 subjects have six modules and **84 draft lessons**. Twelve reference links have been checked for Philosophy and Science; the other 72 drafts still need source research. Claim-level review, source variety, and editorial expansion remain incomplete. There are **zero published modules**.
 
 ## Local development
 

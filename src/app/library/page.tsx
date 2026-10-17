@@ -8,8 +8,8 @@ export default function Library() {
       <div className="eyebrow">The library</div>
       <h1>Follow a question further.</h1>
       <p className="lead">
-        84 modules mapped across 14 subjects. Philosophy and Science have draft
-        lessons; the other paths are plans.
+        84 draft lessons across 14 subjects. Philosophy and Science have checked
+        source links; source research for the other paths is in progress.
       </p>
       <div className="field">
         <label htmlFor="search">
@@ -39,7 +39,14 @@ export default function Library() {
             );
           if (!matches.length) return null;
           return (
-            <section className="card" key={subject}>
+            <section
+              className="card"
+              id={subject
+                .toLowerCase()
+                .replaceAll(/[^a-z0-9]+/g, "-")
+                .replace(/-$/, "")}
+              key={subject}
+            >
               <div className="eyebrow">{subject}</div>
               <h3>{subject}</h3>
               {matches.map((m) => (

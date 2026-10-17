@@ -1,5 +1,6 @@
-import { sourceCatalog } from "./sources";
-import { lessonExpansions } from "./lessonExpansions";
+import { sourceCatalog } from "./sources.ts";
+import { lessonExpansions } from "./lessonExpansions.ts";
+import { additionalLessonRows } from "./additionalLessons.ts";
 
 export type Lesson = {
   slug: string;
@@ -289,7 +290,7 @@ const records: [
     "https://plato.stanford.edu/entries/scientific-objectivity/",
   ],
 ];
-export const lessons: Lesson[] = records.map((r, i) => ({
+const reviewedSourceDrafts: Lesson[] = records.map((r, i) => ({
   slug: r[0]
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
@@ -326,6 +327,44 @@ export const lessons: Lesson[] = records.map((r, i) => ({
   ],
   sources: sourceCatalog.filter((source) => source.url === r[9]),
 }));
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replaceAll(/[^a-z0-9]+/g, "-")
+    .replace(/-$/, "");
+
+const newDrafts: Lesson[] = additionalLessonRows.map((row) => {
+  const [subject, title, question, explanation, example, limitation, exercise] =
+    row;
+  return {
+    slug: slugify(`${subject}-${title}`),
+    subject,
+    title,
+    question,
+    objectives: [
+      `Explain ${title.toLowerCase()} in ${subject.toLowerCase()}`,
+      `Use a concrete example to test the idea`,
+      `Identify a limit of the explanation`,
+    ],
+    minutes: 10,
+    explanation: [explanation],
+    example,
+    limitation,
+    connection: `Use this idea alongside the other modules in ${subject}.`,
+    exercise,
+    teachBack: `Explain ${title.toLowerCase()} in your own words, using the example above and its limitation.`,
+    application: exercise,
+    questions: [
+      question,
+      `Which detail in the worked example illustrates ${title.toLowerCase()}?`,
+      `What would change if the stated limitation applied?`,
+      exercise,
+    ],
+    sources: [],
+  };
+});
+
+export const lessons: Lesson[] = [...reviewedSourceDrafts, ...newDrafts];
 export function getLesson(slug: string) {
   return lessons.find((x) => x.slug === slug);
 }

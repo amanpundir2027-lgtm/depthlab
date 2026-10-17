@@ -22,25 +22,26 @@ export default function Home() {
       </section>
       <section className="section">
         <div className="eyebrow">Start here</div>
-        <h2>Two paths in development</h2>
+        <h2>Explore all 14 subjects</h2>
+        <p className="muted">
+          Six draft lessons in each path. Source review is still in progress.
+        </p>
         <div className="grid">
-          {["Philosophy", "Science"].map((name) => (
-            <a className="card" href="/library" key={name}>
+          {Object.entries(paths).map(([name, modules]) => (
+            <a
+              className="card"
+              href={`/library#${name
+                .toLowerCase()
+                .replaceAll(/[^a-z0-9]+/g, "-")
+                .replace(/-$/, "")}`}
+              key={name}
+            >
               <span className="tag draft">6 draft lessons</span>
               <h3>{name}</h3>
-              <p>{paths[name].slice(0, 3).join(" · ")}</p>
+              <p>{modules.slice(0, 3).join(" · ")}</p>
               <strong>Explore path →</strong>
             </a>
           ))}
-          <div className="card">
-            <span className="tag">Coming later</span>
-            <h3>12 more subjects</h3>
-            <p>
-              Structured learning paths are planned. Lessons will appear as they
-              are researched and reviewed.
-            </p>
-            <a href="/library">View the roadmap →</a>
-          </div>
         </div>
       </section>
       <section className="section">
