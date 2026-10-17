@@ -1,4 +1,4 @@
-import research from "./researchCurriculum.json";
+import research from "./researchCurriculum.json" with { type: "json" };
 import { sourceCatalog } from "./sources.ts";
 
 export type Lesson = {

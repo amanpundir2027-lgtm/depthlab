@@ -1,4 +1,4 @@
-import research from "./researchCurriculum.json";
+import research from "./researchCurriculum.json" with { type: "json" };
 
 export type SourceRecord = {
   id: string;
