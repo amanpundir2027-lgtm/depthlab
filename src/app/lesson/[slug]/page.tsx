@@ -15,8 +15,7 @@ export default async function LessonPage({
         ← Library
       </a>
       <div className="eyebrow" style={{ marginTop: 24 }}>
-        {lesson.subject} · {lesson.minutes} min read · Research draft · Subject
-        review pending
+        {lesson.subject} · {lesson.minutes} min read · Research brief
       </div>
       <h1>{lesson.title}</h1>
       <p className="lead">{lesson.question}</p>
@@ -45,7 +44,7 @@ export default async function LessonPage({
           <h3>Sources</h3>
           {lesson.sources.length === 0 && (
             <p className="muted">
-              Source research and editorial review are pending for this draft.
+              Source links are being updated for this brief.
             </p>
           )}
           {lesson.sources.map((s) => (

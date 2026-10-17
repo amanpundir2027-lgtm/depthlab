@@ -37,7 +37,7 @@ export default function ProgressPage() {
       ) : (
         <div className="two">
           <div className="panel">
-            <h2>Draft lessons</h2>
+            <h2>Research briefs</h2>
             {lessons.map((l) => (
               <div className="module-row" key={l.slug}>
                 <a href={`/lesson/${l.slug}`}>{l.title}</a>

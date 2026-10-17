@@ -9,8 +9,8 @@ export default function Library() {
       <h1>Follow a question further.</h1>
       <p className="lead">
         36 research briefs across 12 subjects. Each topic has a concept map,
-        worked example, practice question, and linked sources. These drafts
-        still need subject review before publication.
+        worked example, practice question, and linked sources. Source access
+        limits are noted in each brief.
       </p>
       <div className="field">
         <label htmlFor="search">
@@ -58,7 +58,7 @@ export default function Library() {
                     </strong>
                     <div className="muted">
                       {m.lesson
-                        ? `${m.lesson.minutes} min read · Research draft`
+                        ? `${m.lesson.minutes} min read · Research brief`
                         : "Planned · Prerequisite: previous module"}
                     </div>
                   </div>

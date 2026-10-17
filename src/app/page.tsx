@@ -52,8 +52,8 @@ export default function Home() {
         <div className="eyebrow">Start here</div>
         <h2>Explore all 12 subjects</h2>
         <p className="muted">
-          Three research briefs in each path. Source and subject review are
-          still in progress.
+          Three research briefs in each path, with examples, practice, and
+          source access notes.
         </p>
         <div className="grid">
           {Object.entries(paths).map(([name, modules]) => (
@@ -65,7 +65,7 @@ export default function Home() {
                 .replace(/-$/, "")}`}
               key={name}
             >
-              <span className="tag draft">3 research briefs</span>
+              <span className="tag published">3 research briefs</span>
               <h3>{name}</h3>
               <p>{modules.slice(0, 3).join(" · ")}</p>
               <strong>Explore path →</strong>
@@ -83,7 +83,7 @@ export default function Home() {
               </span>
               <h3>{x.title}</h3>
               <p>Read, discuss, and try a fresh application.</p>
-              <strong>Open lesson →</strong>
+              <strong>Open brief →</strong>
             </a>
           ))}
         </div>

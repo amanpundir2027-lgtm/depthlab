@@ -46,8 +46,8 @@ export default function Reviews() {
         <div className="panel">
           <h3>Nothing due yet</h3>
           <p>
-            Complete a teach-back and application in a draft lesson to create a
-            review task.
+            Complete a teach-back and application in a research brief to create
+            a review task.
           </p>
         </div>
       ) : (

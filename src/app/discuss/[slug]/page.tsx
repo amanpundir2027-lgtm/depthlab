@@ -12,7 +12,7 @@ export default async function Discuss({
   return (
     <>
       <div className="eyebrow">
-        {lesson.subject} · Research draft discussion
+        {lesson.subject} · Research brief discussion
       </div>
       <h1>{lesson.title}</h1>
       <p className="lead">

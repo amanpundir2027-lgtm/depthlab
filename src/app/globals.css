@@ -158,7 +158,7 @@ p {
   color: #4f655d;
   font-weight: 700;
 }
-.tag.draft {
+.tag.published {
   background: #dceee1;
   color: #2c7046;
 }

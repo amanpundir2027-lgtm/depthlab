@@ -61,7 +61,7 @@ for (const [i, [title, modules]] of Object.entries(paths).entries()) {
       id: lesson?.slug || slug(`${title}-${name}`),
       subject_id: id,
       title: name,
-      status: "draft",
+      status: "published",
       curriculum_version: 1,
       content: lesson || null,
       sequence: j + 1,
@@ -96,5 +96,5 @@ for (const source of sourceCatalog) {
   }
 }
 console.log(
-  `Seeded ${Object.keys(paths).length} subjects, ${Object.values(paths).flat().length} module plans, ${lessons.length} draft lesson records, ${sourceCatalog.length} checked source URLs.`,
+  `Seeded ${Object.keys(paths).length} subjects, ${Object.values(paths).flat().length} module plans, ${lessons.length} published research briefs, ${sourceCatalog.length} checked source URLs.`,
 );
