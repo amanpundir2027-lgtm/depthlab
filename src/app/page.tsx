@@ -1,4 +1,5 @@
 import { lessons, paths } from "@/lib/curriculum";
+import { WaitlistForm } from "@/components/WaitlistForm";
 export default function Home() {
   return (
     <>
@@ -18,6 +19,33 @@ export default function Home() {
           <a className="button secondary" href="/reviews">
             See your reviews
           </a>
+        </div>
+      </section>
+      <section className="section signup-grid" aria-label="Join Depth Lab">
+        <div className="panel" id="waitlist">
+          <div className="eyebrow">Early access</div>
+          <h2>Join the waitlist</h2>
+          <p>Leave your email and we’ll let you know when Depth Lab opens.</p>
+          <WaitlistForm />
+        </div>
+        <div className="panel" id="pricing">
+          <div className="eyebrow">Membership plan</div>
+          <h2>
+            ₹499 <span className="price-period">/ month</span>
+          </h2>
+          <p>Monthly access to Depth Lab when paid membership launches.</p>
+          <p className="muted">
+            Payment gateway integration is coming next. Subscriptions and
+            charges are not available yet.
+          </p>
+          <button className="button" type="button" disabled>
+            Pay ₹499/month · Coming soon
+          </button>
+          <p>
+            <a href="#waitlist">
+              <strong>Join the waitlist for launch updates →</strong>
+            </a>
+          </p>
         </div>
       </section>
       <section className="section">

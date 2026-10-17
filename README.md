@@ -6,6 +6,8 @@ A learning companion prototype built with Next.js, Supabase, Deepgram, and a con
 
 Requires Node 24, npm, and a Supabase project. Copy `.env.example` to `.env.local` and enter values securely. Do not commit `.env.local`. Run `npm ci`, then `npm run dev`. Run `npm test`, `npm run typecheck`, and `npm run build` to validate code. Apply `supabase/migrations/0001_core.sql` to Supabase through its SQL editor or a connected Supabase CLI, then run `npm run seed` with server variables available in the process. The seed is repeatable and marks content as draft. Configure Supabase Auth's Site URL and redirect allowlist for `/auth/callback` at the deployed host.
 
+The public waitlist needs `supabase/migrations/0002_waitlist.sql`, `NEXT_PUBLIC_SUPABASE_URL`, and the server-only `SUPABASE_SERVICE_ROLE_KEY`. The API saves normalized email addresses in a private table and returns an error if storage is unavailable. The ₹499/month plan is displayed for launch planning; checkout and recurring billing are not active until a payment gateway is integrated.
+
 ## Provider configuration
 
 - `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are public client configuration.

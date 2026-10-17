@@ -21,6 +21,8 @@ export default function RootLayout({
               <nav aria-label="Main navigation">
                 <a href="/">Home</a>
                 <a href="/library">Library</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#waitlist">Waitlist</a>
                 <a href="/reviews">Reviews</a>
                 <a href="/progress">Progress</a>
                 <a href="/settings">Account</a>
