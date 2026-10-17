@@ -11,10 +11,13 @@ export default async function Discuss({
   if (!lesson) notFound();
   return (
     <>
-      <div className="eyebrow">{lesson.subject} · Guided discussion</div>
+      <div className="eyebrow">
+        {lesson.subject} · Research draft discussion
+      </div>
       <h1>{lesson.title}</h1>
       <p className="lead">
-        Speak or type. The tutor will ask about your reasoning, not your accent.
+        {lesson.question} Speak or type. The tutor will ask about your
+        reasoning, not your accent.
       </p>
       <Conversation lesson={lesson} />
     </>

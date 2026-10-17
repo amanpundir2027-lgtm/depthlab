@@ -11,31 +11,43 @@ const slug = (s) =>
     .toLowerCase()
     .replaceAll(/[^a-z0-9]+/g, "-")
     .replace(/-$/, "");
-// Retire these curriculum entries without changing learner-owned records.
-for (const subjectId of ["art-and-design", "music"]) {
+async function removeModules(moduleIds) {
+  if (!moduleIds.length) return;
+  const { error: linkError } = await db
+    .from("module_sources")
+    .delete()
+    .in("module_id", moduleIds);
+  if (linkError) throw linkError;
+  const { error: moduleError } = await db
+    .from("modules")
+    .delete()
+    .in("id", moduleIds);
+  if (moduleError) throw moduleError;
+}
+
+// Retire replaced curriculum rows without changing learner-owned records.
+for (const subjectTitle of [...Object.keys(paths), "Art and Design", "Music"]) {
+  const subjectId = slug(subjectTitle);
   const { data: modules, error: lookupError } = await db
     .from("modules")
     .select("id")
     .eq("subject_id", subjectId);
   if (lookupError) throw lookupError;
-  const moduleIds = modules.map(({ id }) => id);
-  if (moduleIds.length) {
-    const { error: linkError } = await db
-      .from("module_sources")
+  const wanted = new Set(
+    lessons
+      .filter((lesson) => lesson.subject === subjectTitle)
+      .map(({ slug }) => slug),
+  );
+  await removeModules(
+    modules.filter(({ id }) => !wanted.has(id)).map(({ id }) => id),
+  );
+  if (!Object.hasOwn(paths, subjectTitle)) {
+    const { error: subjectError } = await db
+      .from("subjects")
       .delete()
-      .in("module_id", moduleIds);
-    if (linkError) throw linkError;
-    const { error: moduleError } = await db
-      .from("modules")
-      .delete()
-      .eq("subject_id", subjectId);
-    if (moduleError) throw moduleError;
+      .eq("id", subjectId);
+    if (subjectError) throw subjectError;
   }
-  const { error: subjectError } = await db
-    .from("subjects")
-    .delete()
-    .eq("id", subjectId);
-  if (subjectError) throw subjectError;
 }
 for (const [i, [title, modules]] of Object.entries(paths).entries()) {
   const id = slug(title);

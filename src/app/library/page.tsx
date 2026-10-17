@@ -8,8 +8,9 @@ export default function Library() {
       <div className="eyebrow">The library</div>
       <h1>Follow a question further.</h1>
       <p className="lead">
-        72 draft lessons across 12 subjects. Philosophy and Science have checked
-        source links; source research for the other paths is in progress.
+        36 research briefs across 12 subjects. Each topic has a concept map,
+        worked example, practice question, and linked sources. These drafts
+        still need subject review before publication.
       </p>
       <div className="field">
         <label htmlFor="search">
@@ -57,12 +58,12 @@ export default function Library() {
                     </strong>
                     <div className="muted">
                       {m.lesson
-                        ? `${m.lesson.minutes} min · Draft`
+                        ? `${m.lesson.minutes} min read · Research draft`
                         : "Planned · Prerequisite: previous module"}
                     </div>
                   </div>
                   {m.lesson ? (
-                    <a href={`/lesson/${m.lesson.slug}`}>Open →</a>
+                    <a href={`/lesson/${m.lesson.slug}`}>Open brief →</a>
                   ) : (
                     <span className="tag">Planned</span>
                   )}

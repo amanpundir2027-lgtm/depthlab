@@ -1,12 +1,13 @@
+import research from "./researchCurriculum.json";
 import { sourceCatalog } from "./sources.ts";
-import { lessonExpansions } from "./lessonExpansions.ts";
-import { additionalLessonRows } from "./additionalLessons.ts";
 
 export type Lesson = {
   slug: string;
   title: string;
   subject: string;
   question: string;
+  stage: string;
+  concepts: string[];
   objectives: string[];
   minutes: number;
   explanation: string[];
@@ -16,339 +17,46 @@ export type Lesson = {
   exercise: string;
   teachBack: string;
   application: string;
+  reviewLater: string;
   questions: string[];
   sources: (typeof sourceCatalog)[number][];
 };
-export const paths: Record<string, string[]> = {
-  Philosophy: [
-    "Arguments and reasons",
-    "Knowledge and evidence",
-    "Ethical reasoning",
-    "Mind and consciousness",
-    "Free will and responsibility",
-    "Justice and institutions",
-  ],
-  Science: [
-    "Evidence and hypotheses",
-    "Measurement and error",
-    "Causation and experiments",
-    "Models and explanation",
-    "Uncertainty and probability",
-    "Scientific disagreement",
-  ],
-  Biology: [
-    "Cells",
-    "Inheritance",
-    "Evolution",
-    "Physiology",
-    "Ecology",
-    "Systems biology",
-  ],
-  Creativity: [
-    "Observation",
-    "Association",
-    "Constraints",
-    "Experimentation",
-    "Critique",
-    "Revision",
-  ],
-  "Fiction and Literature": [
-    "Narration",
-    "Character",
-    "Form",
-    "Themes",
-    "Interpretation",
-    "Comparative reading",
-  ],
-  Cinema: [
-    "Visual language",
-    "Editing",
-    "Sound",
-    "Narrative",
-    "Genre",
-    "Critical interpretation",
-  ],
-  Psychology: [
-    "Research methods",
-    "Learning",
-    "Memory",
-    "Cognition",
-    "Social behavior",
-    "Individual differences",
-  ],
-  "Business and Strategy": [
-    "Customer value",
-    "Business models",
-    "Competition",
-    "Unit economics",
-    "Growth",
-    "Strategic tradeoffs",
-  ],
-  History: [
-    "Sources",
-    "Chronology",
-    "Causation",
-    "Institutions",
-    "Comparisons",
-    "Competing narratives",
-  ],
-  Economics: [
-    "Incentives",
-    "Markets",
-    "Elasticity",
-    "Market failure",
-    "Strategic interaction",
-    "Macroeconomic reasoning",
-  ],
-  "Technology and AI": [
-    "Computation",
-    "Data",
-    "Machine learning",
-    "Evaluation",
-    "Limitations",
-    "Societal implications",
-  ],
-  "Culture and Society": [
-    "Norms",
-    "Identity",
-    "Institutions",
-    "Power",
-    "Media",
-    "Social change",
-  ],
-};
-const records: [
-  string,
-  string,
-  string,
-  string,
-  string,
-  string,
-  string,
-  string,
-  string,
-  string,
-][] = [
-  [
-    "Arguments and reasons",
-    "When does a reason support a conclusion?",
-    "An argument offers premises as reasons for a conclusion. Validity asks whether the conclusion must follow if the premises are true. Soundness adds that the premises really are true. An argument can be valid yet unsound.",
-    "All subscription businesses have recurring revenue; this company sells subscriptions; therefore it has recurring revenue. The inference is valid, although the first premise may need a more exact definition.",
-    "A persuasive story can hide a weak inference. Deductive validity is only one standard: evidence for a scientific claim is usually probabilistic.",
-    "Science uses arguments to connect observations to theories.",
-    "Find a persuasive advertisement. Write its conclusion and two supporting premises.",
-    "Explain validity and soundness without reading.",
-    "A friend says a brand will grow because its latest video went viral. What evidence would strengthen or weaken the inference?",
-    "https://plato.stanford.edu/entries/logic-classical/",
-  ],
-  [
-    "Knowledge and evidence",
-    "What makes a belief more than a good guess?",
-    "A belief can be true by luck. To claim knowledge, ask what evidence supports it and whether the way it was formed reliably connects to the world. Justification matters, but a justified true belief can still be accidentally true: Gettier cases expose this gap.",
-    "A stopped clock reads 3:00, and you look at it exactly at 3:00. Your belief is true and appears supported, but the clock gave no reliable evidence.",
-    "Philosophers disagree on the full definition of knowledge. The point is to inspect reliability, defeaters, and luck, not to assume one settled formula.",
-    "Science improves reliability through replication and measurement.",
-    "Describe a belief you hold. What observation would make you revise it?",
-    "Explain why a lucky correct guess differs from knowledge.",
-    "A competitor claims customers love a product based on five friends. What would you need before acting on that claim?",
-    "https://plato.stanford.edu/entries/knowledge-analysis/",
-  ],
-  [
-    "Ethical reasoning",
-    "How should we decide when good outcomes conflict with duties?",
-    "Consequentialism evaluates results. Deontology asks whether an action respects duties or rights. Virtue ethics asks what a good person would do and become. These frameworks highlight different features of a decision; none removes the need for accurate facts about who is affected.",
-    "A company could quietly use customer data to improve recommendations. Benefits may rise, but consent and privacy duties still matter.",
-    "Outcomes are uncertain, duties may conflict, and different communities may weigh harms differently. A framework guides reasoning; it is not a mechanical answer machine.",
-    "Business strategy also weighs stakeholder tradeoffs.",
-    "Analyze one decision using outcomes, duties, and character separately.",
-    "Teach the three lenses and one weakness of each.",
-    "A health app wants to sell anonymous usage trends. Assess the decision from at least two ethical lenses.",
-    "https://plato.stanford.edu/entries/ethics-virtue/",
-  ],
-  [
-    "Mind and consciousness",
-    "Can physical processes explain experience?",
-    "The mind includes perception, thought, and felt experience. Physicalist approaches seek explanations in brain and bodily processes. The hard problem asks why such processes are accompanied by subjective experience at all. Functional accounts focus on what mental states do, while other accounts challenge whether function is enough.",
-    "A pain signal can be described by nerves and behavior, yet the unpleasant feeling seems like another fact to explain.",
-    "The question is disputed. Neuroscience can map correlations and mechanisms without settling every philosophical claim about experience.",
-    "Biology investigates neural mechanisms; AI raises questions about function and experience.",
-    "Compare a functional explanation of pain with an account of what pain feels like.",
-    "Explain the hard problem fairly, without claiming it proves a particular answer.",
-    "An AI says it feels lonely. What evidence would help, and what remains uncertain?",
-    "https://plato.stanford.edu/entries/consciousness/",
-  ],
-  [
-    "Free will and responsibility",
-    "What kind of freedom makes responsibility fair?",
-    "Determinism says events follow from prior conditions and laws. Compatibilists argue freedom can mean acting from one’s own reasons without coercion, even in a determined world. Incompatibilists argue genuine alternatives or ultimate authorship matter. Responsibility also depends on understanding, control, and social context.",
-    "A person signs a contract after careful thought; another signs under threat. Both actions have causes, but coercion changes the responsibility judgment.",
-    "Neuroscience findings about decisions do not by themselves resolve the philosophical definition of freedom.",
-    "Psychology studies habits and decision making.",
-    "Describe how coercion changes responsibility without assuming causes disappear.",
-    "Explain compatibilism and one objection to it.",
-    "A recommendation algorithm strongly shapes a teenager’s choices. How should responsibility be divided?",
-    "https://plato.stanford.edu/entries/freewill/",
-  ],
-  [
-    "Justice and institutions",
-    "What makes a social rule fair?",
-    "Justice concerns how benefits, burdens, rights, and opportunities are distributed. Equality gives people the same share; equity may respond to relevant differences. Procedural justice asks whether rules and decisions are fair, not only whether outcomes look balanced. Institutions matter because repeated rules shape options before any individual choice.",
-    "A scholarship exam may use the same questions for everyone, while unequal access to preparation affects the opportunity to compete.",
-    "Fairness criteria can conflict. A policy that improves average outcomes may still burden a vulnerable group.",
-    "Economics studies incentives and tradeoffs created by rules.",
-    "Evaluate a rule using both outcome and procedure.",
-    "Explain why equal treatment can differ from fair opportunity.",
-    "A city has funds for only one of two neighborhoods. Design a defensible decision process.",
-    "https://plato.stanford.edu/entries/justice/",
-  ],
-  [
-    "Evidence and hypotheses",
-    "How can evidence challenge an idea?",
-    "A hypothesis makes a claim that observations could support or weaken. A good test states predictions before seeing results and considers alternatives. Evidence rarely proves a broad theory with certainty; instead, it changes how reasonable the theory is relative to rivals.",
-    "If a plant grows faster with fertilizer, compare similar plants with and without it. Growth alone cannot show fertilizer caused the difference.",
-    "A failed prediction can reflect measurement error or a flawed auxiliary assumption, not only a false central theory.",
-    "Philosophy studies inference from evidence to conclusions.",
-    "Write two rival explanations for an observation and a test that separates them.",
-    "Explain why a confirming case is weaker when many rival explanations predict it too.",
-    "A brand’s sales rose after a new campaign. Design a test of the campaign hypothesis.",
-    "https://plato.stanford.edu/entries/science-theory-observation/",
-  ],
-  [
-    "Measurement and error",
-    "What does a number actually measure?",
-    "Measurement links an abstract property to an observable procedure. Operational definitions state how a quantity is measured. Random error varies across observations; systematic error pushes results in a consistent direction. Precision means repeatability, while accuracy means closeness to the target.",
-    "A scale that always adds two kilograms may give very consistent readings but inaccurate weights. Repeating measurements will not remove that bias.",
-    "Some concepts, such as trust or learning, are harder to measure than length. A convenient proxy may miss the intended concept.",
-    "Psychology relies on valid measures of mental constructs.",
-    "Describe the measure and likely errors behind a familiar dashboard metric.",
-    "Explain accuracy, precision, and validity in your own words.",
-    "An app reports users spent longer on lessons. Does that show deeper learning? Design a better measure.",
-    "https://www.nist.gov/pml/nist-technical-note-1297",
-  ],
-  [
-    "Causation and experiments",
-    "When can we say one thing caused another?",
-    "Correlation means variables move together; causation means changing one makes a difference to the other. Confounders can produce a misleading association. Random assignment helps balance known and unknown confounders, while a control group gives a comparison. A well-designed experiment still needs attention to measurement and generalizability.",
-    "Ice-cream sales and heat illness rise together in summer. Temperature is a common cause; buying ice cream is not established as the cause of illness.",
-    "Randomized trials may be unethical or impractical, so careful observational designs can still provide useful evidence.",
-    "Economics uses natural experiments to study policies.",
-    "Draw a simple causal diagram for an everyday claim.",
-    "Explain why correlation alone is insufficient and how randomization helps.",
-    "A learning app adds voice tutoring and completion rises. How would you test whether voice caused the change?",
-    "https://plato.stanford.edu/entries/causation-probabilistic/",
-  ],
-  [
-    "Models and explanation",
-    "Why use a simplified model of reality?",
-    "A model highlights selected relationships so we can explain or predict. Its assumptions define where it works. A mechanistic model traces parts and interactions; a statistical model describes patterns that may predict without revealing the underlying cause. Compare model predictions with observations and revise when failures matter.",
-    "A simple supply-and-demand diagram predicts how a price ceiling can create shortages under stated assumptions, but real markets have institutions and frictions.",
-    "A useful model is not a literal copy of the world. Extrapolation beyond the conditions in which it was tested can fail badly.",
-    "Technology and AI build predictive models with similar limits.",
-    "List the assumptions in a model you use at work or in daily life.",
-    "Explain how a model can be useful despite being simplified.",
-    "A retailer forecasts demand from last year’s data. What changes could make the model unreliable?",
-    "https://plato.stanford.edu/entries/models-science/",
-  ],
-  [
-    "Uncertainty and probability",
-    "How should uncertainty change a decision?",
-    "Probability expresses uncertainty about outcomes under a model or evidence base. A base rate is how common an event was before new information. Bayes’ reasoning updates prior odds using how strongly new evidence distinguishes possibilities. Expected outcomes matter, but so do the size and fairness of possible harms.",
-    "If a rare condition affects one in a thousand people, a positive test with some false positives does not automatically mean the condition is likely. The base rate matters.",
-    "Probabilities can be poorly calibrated when data are sparse or the situation changes. Numbers do not eliminate value judgments.",
-    "Economics and medicine both use uncertainty in decisions.",
-    "Find a claim that ignores its base rate and rewrite it more carefully.",
-    "Explain why a positive test may be misleading for a rare condition.",
-    "A launch has a small chance of a huge loss. How would you compare it with a safer alternative?",
-    "https://plato.stanford.edu/entries/probability-interpret/",
-  ],
-  [
-    "Scientific disagreement",
-    "What should we do when experts disagree?",
-    "Disagreement can reflect uncertain data, different models, or different values in interpreting risk. Look for the specific claim, quality of methods, independent replication, and degree of expert consensus. A single dissenting view is not equal in weight to a large body of converging evidence, yet consensus can change with better evidence.",
-    "Two studies of a diet may disagree because they studied different populations or measured outcomes differently. Compare designs before averaging headlines.",
-    "Institutional incentives and publication bias can distort the visible evidence. Skepticism should be proportionate, not a reason to treat every claim as equally uncertain.",
-    "History examines how scientific communities and institutions change.",
-    "Compare two conflicting reports by methods, population, and claim.",
-    "Explain how to respect expertise while leaving room for revision.",
-    "A founder finds one paper contradicting a broad research consensus. How should they decide what to do?",
-    "https://plato.stanford.edu/entries/scientific-objectivity/",
-  ],
-];
-const reviewedSourceDrafts: Lesson[] = records.map((r, i) => ({
-  slug: r[0]
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replace(/-$/, ""),
-  title: r[0],
-  subject: i < 6 ? "Philosophy" : "Science",
-  question: r[1],
-  objectives: [
-    `Explain ${r[0].toLowerCase()} accurately`,
-    `Identify the reasoning and a limitation`,
-    `Apply the idea to a new situation`,
-  ],
-  minutes: 15,
-  explanation: [
-    r[2],
-    ...(lessonExpansions[
-      r[0]
-        .toLowerCase()
-        .replaceAll(/[^a-z0-9]+/g, "-")
-        .replace(/-$/, "")
-    ] || []),
-  ],
-  example: r[3],
-  limitation: r[4],
-  connection: r[5],
-  exercise: r[6],
-  teachBack: r[7],
-  application: r[8],
-  questions: [
-    `What is the central idea behind ${r[0].toLowerCase()}?`,
-    `Why does it work or what reasoning supports it?`,
-    `Where might this idea fail or be misused?`,
-    r[8],
-  ],
-  sources: sourceCatalog.filter((source) => source.url === r[9]),
+
+export const paths: Record<string, string[]> = Object.fromEntries(
+  [...new Set(research.lessons.map((lesson) => lesson.subject))].map(
+    (subject) => [
+      subject,
+      research.lessons
+        .filter((lesson) => lesson.subject === subject)
+        .sort((a, b) => a.sequence - b.sequence)
+        .map((lesson) => lesson.title),
+    ],
+  ),
+);
+
+export const lessons: Lesson[] = research.lessons.map((brief) => ({
+  slug: brief.slug,
+  title: brief.title,
+  subject: brief.subject,
+  question: brief.question,
+  stage: brief.stage,
+  concepts: brief.concepts,
+  objectives: brief.objectives,
+  minutes: brief.minutes,
+  explanation: brief.explanation,
+  example: brief.example,
+  limitation: brief.limitation,
+  connection: brief.connection,
+  exercise: brief.application,
+  teachBack: brief.teachBack,
+  application: brief.application,
+  reviewLater: brief.reviewLater,
+  questions: brief.questions,
+  sources: sourceCatalog.filter((source) =>
+    brief.sourceIds.includes(source.id),
+  ),
 }));
-const slugify = (value: string) =>
-  value
-    .toLowerCase()
-    .replaceAll(/[^a-z0-9]+/g, "-")
-    .replace(/-$/, "");
 
-const newDrafts: Lesson[] = additionalLessonRows.map((row) => {
-  const [subject, title, question, explanation, example, limitation, exercise] =
-    row;
-  return {
-    slug: slugify(`${subject}-${title}`),
-    subject,
-    title,
-    question,
-    objectives: [
-      `Explain ${title.toLowerCase()} in ${subject.toLowerCase()}`,
-      `Use a concrete example to test the idea`,
-      `Identify a limit of the explanation`,
-    ],
-    minutes: 10,
-    explanation: [explanation],
-    example,
-    limitation,
-    connection: `Use this idea alongside the other modules in ${subject}.`,
-    exercise,
-    teachBack: `Explain ${title.toLowerCase()} in your own words, using the example above and its limitation.`,
-    application: exercise,
-    questions: [
-      question,
-      `Which detail in the worked example illustrates ${title.toLowerCase()}?`,
-      `What would change if the stated limitation applied?`,
-      exercise,
-    ],
-    sources: [],
-  };
-});
-
-export const lessons: Lesson[] = [...reviewedSourceDrafts, ...newDrafts];
 export function getLesson(slug: string) {
-  return lessons.find((x) => x.slug === slug);
+  return lessons.find((lesson) => lesson.slug === slug);
 }

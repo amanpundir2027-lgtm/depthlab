@@ -2,47 +2,48 @@ import { describe, expect, it } from "vitest";
 import { getLesson, lessons, paths } from "./curriculum";
 import { sourceCatalog } from "./sources";
 
-describe("curriculum integrity", () => {
-  it("maps twelve six-module paths with unique lesson IDs", () => {
+describe("research curriculum integrity", () => {
+  it("contains the PDF's three topics for each of twelve subjects", () => {
     expect(Object.keys(paths)).toHaveLength(12);
-    expect(Object.values(paths).every((modules) => modules.length === 6)).toBe(
+    expect(Object.values(paths).every((topics) => topics.length === 3)).toBe(
       true,
     );
-    expect(new Set(lessons.map((lesson) => lesson.slug)).size).toBe(
-      lessons.length,
-    );
+    expect(lessons).toHaveLength(36);
+    expect(new Set(lessons.map((lesson) => lesson.slug)).size).toBe(36);
+    for (const [subject, topics] of Object.entries(paths)) {
+      expect(
+        lessons
+          .filter((lesson) => lesson.subject === subject)
+          .map((lesson) => lesson.title),
+      ).toEqual(topics);
+    }
   });
-  it("provides one distinct draft for every mapped module", () => {
-    expect(lessons).toHaveLength(72);
-    for (const [subject, modules] of Object.entries(paths)) {
-      for (const title of modules) {
-        const matches = lessons.filter(
-          (x) => x.subject === subject && x.title === title,
-        );
-        expect(matches).toHaveLength(1);
-        expect(matches[0].question).toBeTruthy();
-        expect(matches[0].explanation.join(" ").length).toBeGreaterThan(100);
-        expect(matches[0].exercise).toBeTruthy();
+
+  it("keeps each brief's explanation, discussion plan, application, and source access notes", () => {
+    expect(sourceCatalog).toHaveLength(50);
+    expect(new Set(sourceCatalog.map((source) => source.url)).size).toBe(50);
+    for (const lesson of lessons) {
+      expect(lesson.explanation.join(" ").length).toBeGreaterThan(100);
+      expect(lesson.example).toBeTruthy();
+      expect(lesson.limitation).toBeTruthy();
+      expect(lesson.questions).toHaveLength(3);
+      expect(lesson.teachBack).toBeTruthy();
+      expect(lesson.application).toBeTruthy();
+      expect(lesson.objectives.length).toBeGreaterThanOrEqual(2);
+      expect(lesson.sources.length).toBeGreaterThan(0);
+      for (const source of lesson.sources) {
+        expect(source.supportedModules).toContain(lesson.slug);
+        expect(source.accessStatus).toBeTruthy();
       }
     }
   });
-  it("excludes the retired subjects and their lesson routes", () => {
-    expect(paths).not.toHaveProperty("Music");
-    expect(paths).not.toHaveProperty("Art and Design");
+
+  it("does not serve retired topics", () => {
     expect(getLesson("music-rhythm")).toBeUndefined();
     expect(getLesson("art-and-design-visual-elements")).toBeUndefined();
-  });
-  it("keeps checked source claims attached only to researched drafts", () => {
-    for (const lesson of lessons.filter((x) => x.sources.length)) {
-      expect(lesson.sources.length).toBeGreaterThan(0);
-      expect(
-        sourceCatalog.some(
-          (source) =>
-            source.url === lesson.sources[0].url &&
-            source.supportedModules.includes(lesson.slug),
-        ),
-      ).toBe(true);
-    }
-    expect(lessons.filter((x) => x.sources.length)).toHaveLength(12);
+    expect(getLesson("biology-cells")).toBeUndefined();
+    expect(getLesson("philosophy-can-you-be-right-by-luck")?.title).toBe(
+      "Can you be right by luck?",
+    );
   });
 });

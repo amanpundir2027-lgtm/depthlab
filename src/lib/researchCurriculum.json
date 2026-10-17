@@ -1,0 +1,1939 @@
+{
+  "lessons": [
+    {
+      "slug": "philosophy-can-you-be-right-by-luck",
+      "title": "Can you be right by luck?",
+      "subject": "Philosophy",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "What separates knowing something from merely having a true belief?",
+      "concepts": [
+        "belief",
+        "truth",
+        "justification",
+        "epistemic luck"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A belief can be true without being knowledge: a guess may happen to land on the correct answer. The traditional justified-true-belief account adds a reason for believing, but Gettier-style cases show that a well-supported belief can still be accidentally true. The central issue is whether the evidence connects to the truth in the right way, not merely whether the conclusion is correct. Distinguish evaluating a conclusion from evaluating the route used to reach it. This makes the topic useful for reading news, interpreting dashboards, and challenging confident AI answers. [S01]"
+      ],
+      "example": "A campus clock stopped at 9:10 yesterday. You glance at it at exactly 9:10 today and correctly believe the time is 9:10. Contrast that with a working, recently checked clock. The conclusion is identical, but only one route reliably tracks changing time. This is an original Gettier-style teaching example.",
+      "limitation": "Philosophers disagree about the best repair: reliability, safety, virtue, and other accounts differ. The module should establish the problem without presenting one solution as settled. [S01]",
+      "questions": [
+        "Why is the stopped-clock answer different from an informed answer?",
+        "Would adding more reasons remove every kind of luck?",
+        "What observation would expose that your belief-forming method was unreliable?"
+      ],
+      "teachBack": "Explain why truth and a good-sounding reason may still be insufficient for knowledge.",
+      "application": "An analyst correctly predicts rising sales using a corrupted report. What must you establish before calling the prediction knowledge?",
+      "objectives": [
+        "Separate truth from the reliability of the route to it.",
+        "Explain the role of accidental truth in the example.",
+        "Apply a consistent criterion to a new information source."
+      ],
+      "reviewLater": "Can a lucky answer be true and well supported yet still fail to count as knowledge?",
+      "connection": "Science: credible methods versus one successful prediction.",
+      "sourceIds": [
+        "S01"
+      ],
+      "sourceDetail": "S01 The Analysis of Knowledge - Stanford Encyclopedia of Philosophy; 2026-01-21, substantive revision."
+    },
+    {
+      "slug": "philosophy-are-you-the-same-person-after-you-change",
+      "title": "Are you the same person after you change?",
+      "subject": "Philosophy",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "What makes a person persist through memory loss, bodily change, or a perfect copy?",
+      "concepts": [
+        "numerical identity",
+        "psychological continuity",
+        "biological continuity",
+        "branching"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Being the same person over time is different from remaining similar in character. Psychological accounts emphasize connected memories, intentions, and other mental relations. Biological accounts emphasize continuity of the living organism. A copying thought experiment tests these criteria: if two future individuals inherit the same memories, both may resemble you, but ordinary numerical identity cannot make one individual identical to two distinct individuals. The lesson is a disciplined comparison of criteria, not a claim that a real copying machine exists. [S02]"
+      ],
+      "example": "Imagine two perfect digital copies of your current memories. Tomorrow, one studies music and one travels abroad. Ask which, if either, is literally you and why. Then compare that case with ordinary gradual change across ten years. Separate the imagined technology from the philosophical argument.",
+      "limitation": "Memory alone creates difficulties, including forgotten experiences and apparent memories. No consensus settles whether psychological or biological continuity gives the correct account. [S02]",
+      "questions": [
+        "Does changing your personality make you a different person in the numerical sense?",
+        "What happens to your criterion when there are two copies?",
+        "Would losing memory remove moral responsibilities under your view?"
+      ],
+      "teachBack": "Present two identity criteria and one difficult case for each.",
+      "application": "A person with severe amnesia retains their body and relationships. Evaluate identity using both criteria without equating memory loss with loss of human worth.",
+      "objectives": [
+        "Distinguish numerical identity from similarity.",
+        "Compare psychological and biological continuity.",
+        "Use the branching case to identify a limitation."
+      ],
+      "reviewLater": "Why is being very similar different from being the very same individual?",
+      "connection": "Biology and literature: organism continuity, personhood, and conditional belonging.",
+      "sourceIds": [
+        "S02"
+      ],
+      "sourceDetail": "S02 Personal Identity - Stanford Encyclopedia of Philosophy; 2023-06-30, substantive revision."
+    },
+    {
+      "slug": "philosophy-is-doing-harm-worse-than-allowing-it",
+      "title": "Is doing harm worse than allowing it?",
+      "subject": "Philosophy",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "Can saving more people justify actively causing a smaller harm?",
+      "concepts": [
+        "consequences",
+        "duties",
+        "doing versus allowing",
+        "intention"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Ethical disagreements often persist even when people agree on the outcomes. An outcome-focused view emphasizes the harms prevented; other views also constrain what one may do to a person. Doing versus allowing harm is one proposed distinction, while intending harm versus foreseeing it is another. These distinctions should not be collapsed. Thought experiments let a learner vary one feature at a time and test whether a moral principle remains consistent. They do not establish that intuitions alone settle an ethical theory. [S03]"
+      ],
+      "example": "A rescue controller can redirect a threatening process away from five trapped workers toward one. Compare that with failing to operate a rescue device, and with intentionally using someone as a means of rescue. Before choosing, list which facts change and which remain fixed.",
+      "limitation": "A refusal to act can still carry responsibility. Duties, consent, intention, and outcomes may conflict; several defensible ethical frameworks weigh them differently. [S03]",
+      "questions": [
+        "Which morally relevant feature changes between the cases?",
+        "Would your rule still apply if the affected person were your friend?",
+        "Can you describe the strongest objection to your own conclusion?"
+      ],
+      "teachBack": "Explain one outcome-based argument and one duty-based objection without caricaturing either.",
+      "application": "A city must distribute a scarce rescue resource. Propose a rule and test it against an awkward counterexample.",
+      "objectives": [
+        "State a principle beyond personal preference.",
+        "Separate outcomes, agency, and intention.",
+        "Defend a decision while recognizing a coherent objection."
+      ],
+      "reviewLater": "How do doing harm, allowing harm, and intending harm differ?",
+      "connection": "Economics and history: policy tradeoffs and responsibility for foreseeable harms.",
+      "sourceIds": [
+        "S03"
+      ],
+      "sourceDetail": "S03 Doing vs. Allowing Harm - Stanford Encyclopedia of Philosophy; 2025-07-08, substantive revision."
+    },
+    {
+      "slug": "science-does-this-really-cause-that",
+      "title": "Does this really cause that?",
+      "subject": "Science",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "How can you distinguish a cause from a convincing correlation?",
+      "concepts": [
+        "confounding",
+        "reverse causation",
+        "intervention",
+        "randomization"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Two variables can move together because one affects the other, a third factor affects both, or the direction runs opposite to the story being told. A causal question asks what would change under an intervention. Random assignment can make treatment groups comparable in expectation and reduce systematic confounding, but it does not excuse poor measurement or execution. Observational evidence can still be informative, especially when experiments are impossible; it requires explicit assumptions and careful alternative explanations. [S04]"
+      ],
+      "example": "Students who attend a study club score 15 points higher in a fictional survey. Motivation may influence both attendance and scores. Randomly inviting students addresses a different question from forcing attendance: distinguish the effect of an invitation from the effect of participation.",
+      "limitation": "Randomization does not guarantee balance in every finite sample or generalizability to every population. Some causal questions cannot ethically or practically be randomized. [S04]",
+      "questions": [
+        "What third variable could explain the study-club result?",
+        "What exactly would your experiment randomize?",
+        "If invited students do not attend, what causal effect can you still estimate?"
+      ],
+      "teachBack": "Explain confounding and how an intervention changes the question.",
+      "application": "An app reports that users of a new feature retain better. Design a credible test and identify one limitation.",
+      "objectives": [
+        "Identify plausible confounding and reverse causation.",
+        "Specify intervention, comparison, and outcome.",
+        "Explain one remaining limitation of the proposed design."
+      ],
+      "reviewLater": "Why can self-selection create an apparent effect even when the feature does nothing?",
+      "connection": "Biology, psychology, and business: the common logic of evidence.",
+      "sourceIds": [
+        "S04"
+      ],
+      "sourceDetail": "S04 6.1 Correlation and Causation - UC Berkeley, Sense & Sensibility & Science; date not established."
+    },
+    {
+      "slug": "science-one-exciting-study-is-not-the-whole-answer",
+      "title": "One exciting study is not the whole answer",
+      "subject": "Science",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "When should a scientific finding change your confidence?",
+      "concepts": [
+        "reproducibility",
+        "replicability",
+        "uncertainty",
+        "effect size"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Under the National Academies' definitions, computational reproducibility uses the same data and analysis, while replicability asks whether new studies with new data obtain consistent results. A failure can reveal mistakes, contextual differences, or a fragile finding; it does not automatically prove fraud. [S05] A p-value is conditional on a statistical model and is not the probability that a hypothesis is true. Evidence appraisal also needs study design, effect size, uncertainty, and the broader body of research. [S06]"
+      ],
+      "example": "A fictional learning intervention improves a test by two points in a large study. A second study estimates one point with considerable uncertainty. Ask whether this is a direct contradiction, what a two-point effect means educationally, and whether a reproducible spreadsheet would settle the intervention's real-world value.",
+      "limitation": "Fields use these terms differently. Neither one successful replication nor an arbitrary significance cutoff establishes practical importance or universality. [S05, S06]",
+      "questions": [
+        "What is the difference between rerunning code and collecting new data?",
+        "What can a small p-value not tell you?",
+        "How could different contexts produce legitimately different results?"
+      ],
+      "teachBack": "Explain what evidence you would want beyond a headline reporting statistical significance.",
+      "application": "Evaluate two hypothetical studies with different sample sizes, effect estimates, and uncertainty. State what you can and cannot conclude.",
+      "objectives": [
+        "Distinguish the two forms of repetition.",
+        "Reject the posterior-probability interpretation of a p-value.",
+        "Assess design, effect magnitude, and uncertainty together."
+      ],
+      "reviewLater": "Can an effect be statistically detectable but practically unimportant?",
+      "connection": "Psychology: what a robust learning claim should require.",
+      "sourceIds": [
+        "S05",
+        "S06"
+      ],
+      "sourceDetail": "S05 Reproducibility and Replicability in Science: Highlights - National Academies of Sciences, Engineering, and Medicine; 2019-05. S06 ASA Releases Statement on Statistical Significance and P-Values - American Statistical Association; 2016-03-07."
+    },
+    {
+      "slug": "science-why-does-a-refrigerator-not-break-the-second-law",
+      "title": "Why does a refrigerator not break the second law?",
+      "subject": "Science",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "How can living things become organized if total entropy tends to increase?",
+      "concepts": [
+        "system boundary",
+        "microstates",
+        "entropy",
+        "energy transfer"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Statistical entropy relates a macroscopic condition to the number of microscopic arrangements compatible with it. The second law concerns the total entropy change of an isolated system, not a rule that every small part must always become less organized. [S07] Living systems and refrigerators exchange energy with their surroundings. Local decreases are compatible with a larger increase elsewhere. Energy is conserved, but its availability for useful work can change. [S08]"
+      ],
+      "example": "A refrigerator removes heat from food while consuming electrical work and releasing heat into the room. Draw a boundary around only the food, then around food, refrigerator, power supply, and surroundings. The answer changes when the relevant exchanges are included.",
+      "limitation": "Everyday visual messiness is only an analogy, not a quantitative definition of entropy. State the system and process before using entropy to explain a phenomenon. [S07]",
+      "questions": [
+        "What crosses the boundary of the cold compartment?",
+        "Where does the refrigerator release energy?",
+        "Why does energy conservation not mean unlimited useful work?"
+      ],
+      "teachBack": "Explain local order and total entropy using a refrigerator rather than a messy-room slogan.",
+      "application": "A sealed greenhouse grows plants under an electric lamp. Decide whether the whole setup is isolated and what must be included in its accounting.",
+      "objectives": [
+        "Specify the system boundary.",
+        "Account for energy exchange and surroundings.",
+        "Distinguish conservation of energy from availability for work."
+      ],
+      "reviewLater": "What boundary must you specify before claiming entropy decreased?",
+      "connection": "Biology: metabolism and evolution without a thermodynamic contradiction.",
+      "sourceIds": [
+        "S07",
+        "S08"
+      ],
+      "sourceDetail": "S07 4.7 Entropy on a Microscopic Scale - OpenStax, University Physics Volume 2; 2016, textbook. S08 6.3 The Laws of Thermodynamics - OpenStax, Biology 2e; 2018, textbook."
+    },
+    {
+      "slug": "biology-how-does-evolution-happen-in-real-time",
+      "title": "How does evolution happen in real time?",
+      "subject": "Biology",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "Why can a drug change the proportion of resistant bacteria?",
+      "concepts": [
+        "heritable variation",
+        "selection pressure",
+        "differential reproduction",
+        "gene transfer"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Selection changes populations when heritable differences affect survival or reproduction in a particular environment. With antimicrobial exposure, resistant microbes can gain a relative advantage as susceptible competitors decline. Resistance traits can arise through genetic changes and spread between microbes; transmission then moves resistant organisms between hosts and settings. The patient's body does not become the resistant organism. [S09] This is population reasoning: a treatment does not require each bacterium to deliberately learn a new defense."
+      ],
+      "example": "In a deliberately simplified model, a population contains 990 susceptible and 10 resistant bacteria. After an exposure, 99 susceptible and 9 resistant organisms remain. Resistance rose from 1% to about 8.3%, even though the absolute resistant count fell. This illustrates selection, not a clinical prediction.",
+      "limitation": "Real populations also involve mutation, gene transfer, ecological interactions, and changing resistance costs. The numerical example is a thought model, not prescribing guidance. [S09]",
+      "questions": [
+        "Did resistance frequency increase even though nine is less than ten?",
+        "What must be heritable for selection to change later generations?",
+        "Could resistance spread without a new mutation in every host?"
+      ],
+      "teachBack": "Explain variation, selection, and population change without giving bacteria intentions.",
+      "application": "In an insect population, a pesticide leaves different survival rates by inherited trait. Predict the direction of change and state a missing assumption.",
+      "objectives": [
+        "Explain relative reproductive or survival advantage.",
+        "Separate frequency from absolute count.",
+        "Recognize mutation and transfer without confusing them with selection."
+      ],
+      "reviewLater": "Can the frequency of a trait rise while its absolute count falls?",
+      "connection": "Science and strategy: selection effects versus intentional adaptation.",
+      "sourceIds": [
+        "S09"
+      ],
+      "sourceDetail": "S09 Antimicrobial Resistance: Causes and How It Spreads - US Centers for Disease Control and Prevention; date not established."
+    },
+    {
+      "slug": "biology-are-genes-a-blueprint-or-a-starting-point",
+      "title": "Are genes a blueprint or a starting point?",
+      "subject": "Biology",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "Why does high heritability not mean an outcome is unchangeable?",
+      "concepts": [
+        "genotype",
+        "gene regulation",
+        "epigenome",
+        "heritability"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Gene expression depends on regulatory processes, including chemical marks associated with DNA and chromatin. These processes help different cell types use the same genome differently; environmental influences can also affect regulation. [S10] Heritability describes the contribution of genetic variation to variation in a trait within a studied population and environment. It is not the genetic percentage of one person, nor a guarantee that intervention cannot matter. [S11]"
+      ],
+      "example": "Imagine two gardens planted with varied seeds. Within a uniformly watered garden, differences among plants may be strongly associated with seed variation. Moving the entire garden into drought can still alter all outcomes. This analogy illustrates environmental dependence; it is not a heritability calculation.",
+      "limitation": "Epigenetics does not imply that thoughts can rewrite any gene or that all acquired changes pass reliably to grandchildren. Cell-to-cell inheritance and inheritance across generations are different claims. [S10]",
+      "questions": [
+        "What is the population to which a heritability estimate applies?",
+        "How can cells with similar DNA have different functions?",
+        "Which additional evidence would support a claim of transgenerational inheritance?"
+      ],
+      "teachBack": "Separate DNA sequence, regulation, and population heritability.",
+      "application": "An article says a highly heritable skill makes education pointless. Identify the reasoning error and describe a useful study.",
+      "objectives": [
+        "Interpret heritability at population level.",
+        "Explain regulation without claiming sequence change.",
+        "Distinguish environmental responsiveness from genetic determinism."
+      ],
+      "reviewLater": "Why does heritability not directly measure whether an intervention can work?",
+      "connection": "Psychology and society: avoid turning group statistics into individual destiny.",
+      "sourceIds": [
+        "S10",
+        "S11"
+      ],
+      "sourceDetail": "S10 Epigenomics Fact Sheet - National Human Genome Research Institute, NIH; date not established. S11 What Is Heritability? - MedlinePlus Genetics, US National Library of Medicine; date not established."
+    },
+    {
+      "slug": "biology-your-microbiome-explanation-or-marketing-story",
+      "title": "Your microbiome: explanation or marketing story?",
+      "subject": "Biology",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "What evidence would show that a microbial change causes an outcome?",
+      "concepts": [
+        "microbial community",
+        "composition",
+        "confounding",
+        "causal pathway"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A microbiome is a changing community, not a fixed label for a person. Sampling time, location, diet, medications, and other factors complicate associations with health. Different causal pathways can produce similar observed microbial patterns. [S12] A useful argument connects an exposure, microbial change or product, biological mechanism, and outcome. Comparing people at one time point cannot by itself establish that changing a microbe will improve an outcome. The causal-inference logic is the same as in an experiment about an app feature. [S04]"
+      ],
+      "example": "A fictional survey finds that people reporting better sleep have more of microbe X. Better sleep might affect diet, diet might affect both sleep and microbes, or X might matter. Draw all three explanations before designing a longitudinal or randomized study.",
+      "limitation": "Neither more diversity nor more of a named organism automatically means better health. A community-level association does not establish the benefit of a particular commercial product. These briefs do not evaluate treatments. [S12]",
+      "questions": [
+        "Which variables could influence both the microbial measurement and the outcome?",
+        "What would a time sequence add, and what would it not settle?",
+        "How could a proposed biological mechanism be tested independently?"
+      ],
+      "teachBack": "Explain the difference between a microbial marker and a demonstrated cause.",
+      "application": "Critique an invented advertisement claiming a drink improves mood because users have a different microbiome.",
+      "objectives": [
+        "Generate alternative causal explanations.",
+        "Specify a testable mechanism rather than a vague gut-health slogan.",
+        "Distinguish community association from product-level evidence."
+      ],
+      "reviewLater": "Why does changing a biomarker not necessarily change the outcome?",
+      "connection": "Science, psychology, and business: evaluating claims behind product marketing.",
+      "sourceIds": [
+        "S12",
+        "S04"
+      ],
+      "sourceDetail": "S12 Microbiome Epidemiology and Association Studies in Human Health - Hannah VanEvery and colleagues, Nature Reviews Genetics; 2023-02; online 2022. S04 6.1 Correlation and Causation - UC Berkeley, Sense & Sensibility & Science; date not established."
+    },
+    {
+      "slug": "creativity-can-limits-make-you-more-creative",
+      "title": "Can limits make you more creative?",
+      "subject": "Creativity",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "When does a constraint focus imagination, and when does it simply block it?",
+      "concepts": [
+        "search space",
+        "constraint type",
+        "motivation",
+        "feasibility"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A constraint narrows the space of possible solutions. That can prompt exploration beyond obvious options, but it can also remove essential resources or create excessive pressure. The research review separates constraints rather than treating them as one universal force. Their effects depend on what is constrained and the processes through which people respond. [S13] A productive design question is therefore which limit improves search without destroying the ability to implement a worthwhile idea."
+      ],
+      "example": "Design a campus-event poster using only two colors and twelve words. Compare that brief with a ten-minute deadline plus no access to the event details. Both are constraints, but the first structures expression while the second may prevent competent execution.",
+      "limitation": "The conclusion is not that scarcity is always good. A constraint that supports exploration for one task or person can undermine another. [S13]",
+      "questions": [
+        "What type of constraint did the poster task impose?",
+        "Which options did it remove and which searches did it encourage?",
+        "How would you tell whether the limit improved quality rather than just reducing output?"
+      ],
+      "teachBack": "Explain one helpful and one harmful constraint through their mechanisms.",
+      "application": "Create a new-product concept under one chosen limit. Then remove the limit and explain which version is better and why.",
+      "objectives": [
+        "Distinguish constraint types.",
+        "Connect the limit to a change in search or motivation.",
+        "Evaluate originality and usefulness rather than quantity alone."
+      ],
+      "reviewLater": "What evidence would distinguish a useful constraint from arbitrary deprivation?",
+      "connection": "Art, business, and cinema: deliberate form and production constraints.",
+      "sourceIds": [
+        "S13"
+      ],
+      "sourceDetail": "S13 Creativity and Innovation Under Constraints: A Cross-Disciplinary Integrative Review - Oguz A. Acar, Murat Tarakci, Daan van Knippenberg; 2019."
+    },
+    {
+      "slug": "creativity-why-can-stepping-away-help",
+      "title": "Why can stepping away help?",
+      "subject": "Creativity",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "When should you keep working on a problem, and when should you take a break?",
+      "concepts": [
+        "incubation",
+        "fixation",
+        "preparation",
+        "task demands"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Incubation means setting a problem aside before attempting it again. A meta-analysis found an average benefit, with substantial differences by task and conditions. Preparation and what happens during the break matter. A break can loosen fixation or alter access to possible solutions; the evidence does not establish one universal unconscious mechanism. [S14] The useful habit is structured alternation between engagement and distance, followed by evaluation of the result."
+      ],
+      "example": "Write ten explanations for a fictional brand's low repeat purchases. Note the first explanation you keep returning to. Take a low-demand break, then generate alternatives. Compare their novelty and testability, not whether the break felt inspiring. This is a personal exercise, not a controlled experiment.",
+      "limitation": "A break is not a substitute for understanding the task. The reported effect varies by preparation, problem type, and intervening activity; it does not guarantee an insight. [S14]",
+      "questions": [
+        "What would you do before a useful incubation period?",
+        "Why might an absorbing unrelated task differ from a low-demand break?",
+        "How would you compare incubation with simply giving someone more working time?"
+      ],
+      "teachBack": "Explain incubation as a conditional strategy rather than a magical creative state.",
+      "application": "You are stuck on an essay thesis. Design a work-break-revision cycle and identify what you will evaluate afterward.",
+      "objectives": [
+        "Define incubation distinctly from procrastination.",
+        "Identify at least one moderating condition.",
+        "Propose a comparison that avoids attributing every improvement to the break."
+      ],
+      "reviewLater": "Why must an incubation comparison control total time and initial preparation?",
+      "connection": "Psychology: memory access, attention, and misleading introspection.",
+      "sourceIds": [
+        "S14"
+      ],
+      "sourceDetail": "S14 Does Incubation Enhance Problem Solving? A Meta-Analytic Review - Ut Na Sio and Thomas C. Ormerod; 2009-01."
+    },
+    {
+      "slug": "creativity-is-originality-usually-a-new-combination",
+      "title": "Is originality usually a new combination?",
+      "subject": "Creativity",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "How can an idea be both familiar enough to understand and different enough to matter?",
+      "concepts": [
+        "recombination",
+        "novelty",
+        "usefulness",
+        "domain knowledge"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "New ideas often combine existing elements. Research on scientific papers associated high citation impact with a mix of conventional grounding and unusual combinations of prior work. That finding offers a useful lens: familiarity can support comprehension while an unexpected connection opens a new possibility. [S15] Recombination is not random collage. A learner must explain which relationship is being transferred and why it fits the new problem."
+      ],
+      "example": "Combine spaced learning with a museum visit: after each exhibit, a visitor explains one idea, then receives a later question connecting two exhibits. Identify the borrowed mechanisms. Compare this with merely putting a quiz logo on an unchanged tour.",
+      "limitation": "The cited study is observational and concerns scientific citation patterns. It does not prove that an unusual mashup causes quality, commercial success, or ethical acceptability. [S15]",
+      "questions": [
+        "Which existing components make up your proposal?",
+        "What does the combination do that the separate parts do not?",
+        "What evidence would show that the idea helps a real user?"
+      ],
+      "teachBack": "Explain how recombination differs from imitation and arbitrary novelty.",
+      "application": "Borrow one mechanism from ecology and one from education to propose a campus service. State where the analogy breaks.",
+      "objectives": [
+        "Identify the mechanism borrowed from each domain.",
+        "Explain the new relationship rather than just naming ingredients.",
+        "Recognize observational limits and evaluate usefulness."
+      ],
+      "reviewLater": "Why does novelty need a domain-specific usefulness test?",
+      "connection": "Biology, literature, and design: analogy with explicit limits.",
+      "sourceIds": [
+        "S15"
+      ],
+      "sourceDetail": "S15 Atypical Combinations and Scientific Impact - Brian Uzzi, Satyam Mukherjee, Michael Stringer, Ben Jones; 2013."
+    },
+    {
+      "slug": "fiction-and-literature-should-you-trust-the-person-telling-the-story",
+      "title": "Should you trust the person telling the story?",
+      "subject": "Fiction and Literature",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "How can a narrator reveal more than they intend?",
+      "concepts": [
+        "narrator versus author",
+        "unreliability",
+        "textual evidence",
+        "inference"
+      ],
+      "minutes": 20,
+      "explanation": [
+        "In Poe's The Tell-Tale Heart, the narrator insists on their own rational control while recounting behavior that gives readers grounds to question that claim. The learning task is to compare testimony, actions, and interpretation. An unreliable narrator need not knowingly lie: a narrator can misperceive, misjudge, or fail to understand what the reader infers. This is an interpretive reading grounded in contradictions within the primary story, not a clinical diagnosis of the character. [S16]"
+      ],
+      "example": "Create a two-column evidence sheet: what the narrator says about their calmness, and what their reported actions suggest. Paraphrase two moments. Explain the inference linking each moment to your interpretation, rather than citing a detail without reasoning.",
+      "limitation": "Unreliability does not mean every described event is false. Separate doubts about perception, motives, and facts; alternative readings must still answer the text. [S16]",
+      "questions": [
+        "Where does a statement conflict with behavior?",
+        "Which facts would your interpretation still accept?",
+        "What evidence could weaken your reading?"
+      ],
+      "teachBack": "Defend a claim about reliability with two textual details and a stated inference.",
+      "application": "A fictional product-review narrator claims neutrality while hiding a sponsorship. Explain which kinds of reliability are affected and which are not.",
+      "objectives": [
+        "Distinguish author, narrator, and reader inference.",
+        "Use relevant textual evidence.",
+        "Address a plausible alternative interpretation."
+      ],
+      "reviewLater": "What is the difference between disagreeing with a narrator and proving a specific unreliability?",
+      "connection": "Philosophy and technology: trustworthy testimony versus confident presentation.",
+      "sourceIds": [
+        "S16"
+      ],
+      "sourceDetail": "S16 The Tell-Tale Heart - Edgar Allan Poe; hosted by The Poe Museum; 1843, original story."
+    },
+    {
+      "slug": "fiction-and-literature-can-a-story-say-one-thing-and-mean-another",
+      "title": "Can a story say one thing and mean another?",
+      "subject": "Fiction and Literature",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "How does The Story of an Hour complicate the relationship between love and freedom?",
+      "concepts": [
+        "focalization",
+        "dramatic irony",
+        "agency",
+        "ambiguity"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Kate Chopin's story gives readers access to Louise Mallard's private responses to news of her husband's supposed death. Her grief coexists with an emerging sense of independence. The ending juxtaposes public explanation with information the reader has encountered through her perspective. This supports an ironic reading, but does not make a single psychological or medical explanation certain. The exercise is to trace how access to a character's consciousness shapes interpretation. [S17]"
+      ],
+      "example": "Compare three descriptions of the same fictional event: a neighbor's report, a character's private thoughts, and an official explanation. List what each perspective can know. Return to Chopin and connect perspective to the meaning of the ending.",
+      "limitation": "Do not reduce the story to a slogan that Louise never loved her husband. Her ambivalence and the compressed narrative leave room for multiple defensible readings. [S17]",
+      "questions": [
+        "What does the reader know that the other characters do not?",
+        "Which details support coexistence of affection and constraint?",
+        "How would the meaning change if the story were told only by her sister?"
+      ],
+      "teachBack": "Explain how perspective makes the ending ironic, using two details without claiming certainty about a diagnosis.",
+      "application": "Write a four-sentence account of a celebration that one participant privately experiences as a loss. Explain the information gap.",
+      "objectives": [
+        "Explain irony through an information gap.",
+        "Support an account of agency with details.",
+        "Recognize ambiguity rather than asserting one hidden definitive answer."
+      ],
+      "reviewLater": "How does restricted access to private thought change a reader's judgment?",
+      "connection": "Culture and philosophy: autonomy, marriage, and the difference between social roles and private experience.",
+      "sourceIds": [
+        "S17"
+      ],
+      "sourceDetail": "S17 The Story of an Hour - Kate Chopin; hosted by Virginia Commonwealth University; 1894, original story."
+    },
+    {
+      "slug": "fiction-and-literature-what-makes-someone-worth-caring-for",
+      "title": "What makes someone worth caring for?",
+      "subject": "Fiction and Literature",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "In Metamorphosis, is Gregor's exclusion caused only by his changed body?",
+      "concepts": [
+        "alienation",
+        "symbolism",
+        "economic role",
+        "personhood"
+      ],
+      "minutes": 90,
+      "explanation": [
+        "Kafka's novella begins with Gregor Samsa's unexplained bodily transformation and follows the strain on his work and family relationships. A productive reading asks how usefulness, dependence, communication, and disgust shape recognition of a person. The transformation need not be decoded as a single symbol. Track changes in how others respond as his former economic role disappears. These are interpretive possibilities to test against scenes, not conclusions about the author's one intended message. [S18]"
+      ],
+      "example": "Build a timeline of Gregor's ability to earn, his attempts to communicate, and others' responses. Compare two moments at which care changes. Test whether loss of income alone explains them, or whether the account needs other factors.",
+      "limitation": "No single allegory exhausts the novella. Avoid equating disability with loss of humanity, and do not reproduce the linked copyrighted translation inside the app. [S18]",
+      "questions": [
+        "What evidence supports an economic reading?",
+        "Which scene complicates an income-only explanation?",
+        "How do communication failures alter the reader's access to Gregor?"
+      ],
+      "teachBack": "Defend one interpretation of conditional belonging and address one counterexample.",
+      "application": "Analyze an invented story about a worker replaced by automation. Identify a meaningful parallel and an important difference from Kafka.",
+      "objectives": [
+        "Use a sequence of textual evidence.",
+        "Compare at least two possible explanations.",
+        "Transfer the insight without flattening differences between works."
+      ],
+      "reviewLater": "How would you distinguish a supported interpretation from a convenient metaphor?",
+      "connection": "Biology, philosophy, and business: personhood and the limits of valuing people by productivity.",
+      "sourceIds": [
+        "S18"
+      ],
+      "sourceDetail": "S18 Metamorphosis, translated by David Wyllie - Franz Kafka; Project Gutenberg edition; 1915, original novella; translation date not established."
+    },
+    {
+      "slug": "cinema-the-camera-is-already-making-an-argument",
+      "title": "The camera is already making an argument",
+      "subject": "Cinema",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "How can two shots of the same event lead to different interpretations?",
+      "concepts": [
+        "framing",
+        "camera angle",
+        "focus",
+        "point of view"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A frame selects what is visible and what remains outside the image. Camera height, distance, movement, and focus organize attention and can align viewers with a character's perspective. These choices work in context rather than forming a fixed dictionary: a low-angle shot need not always mean power. Analyze the relationship between an observable formal choice and a proposed effect on the viewer. [S19]"
+      ],
+      "example": "Describe a fictional job interview twice: first as a distant static wide shot showing both people, then as alternating close-ups with shallow focus. Identify which information and reactions each arrangement emphasizes. Do not claim a real audience response without testing it.",
+      "limitation": "Formal conventions are not universal emotional laws. Narrative context, culture, performance, and neighboring shots can reverse or complicate an effect. [S19]",
+      "questions": [
+        "What information has the frame excluded?",
+        "Whose attention does the camera seem to share?",
+        "What alternative interpretation could the same angle support in another scene?"
+      ],
+      "teachBack": "Link one formal choice to an interpretation and one contextual qualification.",
+      "application": "Storyboard two versions of a student entering a classroom: one conveying confidence, one uncertainty, without changing dialogue.",
+      "objectives": [
+        "Name an observable cinematic choice accurately.",
+        "Explain its proposed effect using scene context.",
+        "Avoid treating a convention as a universal code."
+      ],
+      "reviewLater": "Why is identifying a close-up not yet an analysis?",
+      "connection": "Literature and psychology: focalization and attention.",
+      "sourceIds": [
+        "S19"
+      ],
+      "sourceDetail": "S19 Film Analysis, Part 3: Cinematography - Yale Film Studies; date not established."
+    },
+    {
+      "slug": "cinema-meaning-happens-between-shots",
+      "title": "Meaning happens between shots",
+      "subject": "Cinema",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "How can a cut imply a relationship that neither shot proves?",
+      "concepts": [
+        "juxtaposition",
+        "continuity",
+        "cross-cutting",
+        "duration"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Editing creates relationships across shots. Continuity techniques help viewers infer stable space, time, and action. Juxtaposition can suggest association or contrast, while cross-cutting can imply parallel events and build anticipation. Shot duration also shapes pacing. A viewer's inferred connection is not proof that the events caused each other, or even occurred together outside the constructed sequence. [S20]"
+      ],
+      "example": "Sequence a neutral face, an empty plate, and the same face. Then replace the plate with a trophy. Ask how the inferred mental state changes. This is an original editing exercise, not a claim to replicate a definitive historical Kuleshov experiment.",
+      "limitation": "Do not teach a disputed anecdote as a universal experiment on all viewers. Montage effects depend on context; a long take also selects and organizes information. [S20]",
+      "questions": [
+        "What did you infer that no individual shot showed?",
+        "Which edit would make geography easier to follow?",
+        "How could a documentary use the same method misleadingly?"
+      ],
+      "teachBack": "Explain continuity and juxtaposition with one example of each.",
+      "application": "Reorder three fictional reaction shots to change a character's apparent motive. Explain exactly where the inference is introduced.",
+      "objectives": [
+        "Distinguish continuity from associative juxtaposition.",
+        "Identify an inference supplied by editing.",
+        "Explain an ethical limitation of that inference."
+      ],
+      "reviewLater": "What is the difference between an implied connection and evidence of causation?",
+      "connection": "Science and culture: constructed associations and misleading evidence.",
+      "sourceIds": [
+        "S20"
+      ],
+      "sourceDetail": "S20 Film Analysis, Part 4: Editing - Yale Film Studies; date not established."
+    },
+    {
+      "slug": "cinema-what-can-sound-reveal-that-the-image-hides",
+      "title": "What can sound reveal that the image hides?",
+      "subject": "Cinema",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "How do sound source and silence shape what a viewer believes?",
+      "concepts": [
+        "diegetic sound",
+        "nondiegetic sound",
+        "offscreen space",
+        "sound bridge"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Diegetic sound belongs to the story world; nondiegetic sound, such as a musical score, need not be heard by its characters. A sound can also be offscreen while still belonging to that world. These are different distinctions. Sound can direct attention, connect scenes, disclose unseen action, or create a gap between a character's knowledge and the viewer's. Analyze both source and function rather than equating all music with background decoration. [S21]"
+      ],
+      "example": "In a fictional corridor scene, add footsteps outside the frame. Next add an ominous score. The first suggests a source characters could hear; the second may guide only viewers. Finally, remove the score and describe what changes without assuming silence always means safety.",
+      "limitation": "Voice-over and music can have complex or shifting story-world status. Identify what the scene establishes rather than assigning every sound a rigid category. [S21]",
+      "questions": [
+        "Could a character hear this sound?",
+        "Is its source visible, and is that the same question?",
+        "How would changing only the sound alter the viewer's interpretation?"
+      ],
+      "teachBack": "Explain the difference between offscreen and nondiegetic sound.",
+      "application": "Design a ten-second scene whose unseen event is communicated entirely through sound. Explain the evidence the audience receives.",
+      "objectives": [
+        "Distinguish story-world status from visibility.",
+        "Connect a sound choice to information or viewpoint.",
+        "Recognize ambiguity in complex cases."
+      ],
+      "reviewLater": "Can a sound be both offscreen and diegetic?",
+      "connection": "Psychology and literature: expectation, perspective, and withheld information.",
+      "sourceIds": [
+        "S21"
+      ],
+      "sourceDetail": "S21 Film Analysis, Part 5: Sound - Yale Film Studies; date not established."
+    },
+    {
+      "slug": "psychology-why-rereading-can-feel-better-than-it-works",
+      "title": "Why rereading can feel better than it works",
+      "subject": "Psychology",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "How can you tell whether a lesson is familiar or retrievable?",
+      "concepts": [
+        "retrieval practice",
+        "distributed practice",
+        "familiarity",
+        "feedback"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Fluent rereading can make material feel familiar without showing that it can be recalled or applied. A broad review rated practice testing and distributed practice highly across many learning conditions. [S22, S23] Retrieval practice means trying to bring information to mind; spacing distributes encounters over time. They are related but distinct. A well-designed learning loop combines an independent attempt, corrective feedback, and later retrieval rather than rewarding exposure alone."
+      ],
+      "example": "Read a short concept, close it, and explain its mechanism. Reopen it to locate a missing step. Attempt a different example tomorrow. Compare this with immediately recognizing the correct answer while the explanation remains on screen. This exercise illustrates a distinction; it is not proof of improvement in one person.",
+      "limitation": "No single interval fits every goal. Retrieval alone cannot repair a misunderstood explanation without appropriate instruction and feedback; recognition tests can also be useful when designed well. [S22, S23]",
+      "questions": [
+        "What can you do without seeing the lesson?",
+        "How is spacing different from repeatedly testing in one sitting?",
+        "What feedback would turn an error into a useful next attempt?"
+      ],
+      "teachBack": "Explain why the app separates reading, confidence, and demonstrated understanding.",
+      "application": "Design a one-week learning plan for elasticity that includes explanation, retrieval, feedback, and a new application.",
+      "objectives": [
+        "Separate familiarity from unaided retrieval.",
+        "Distinguish spacing from repetition quantity.",
+        "Include feedback and delayed application in a study plan."
+      ],
+      "reviewLater": "What would you measure after a delay to distinguish familiarity from durable learning?",
+      "connection": "App design and science: why completion clicks cannot establish mastery.",
+      "sourceIds": [
+        "S22",
+        "S23"
+      ],
+      "sourceDetail": "S22 Improving Students' Learning With Effective Learning Techniques - John Dunlosky, Katherine Rawson, Elizabeth Marsh, Mitchell Nathan, Daniel Willingham; APS; 2013-01-07. S23 All Study Strategies Not Created Equal, According to Kent State Researchers - Kent State University, Department of Psychological Sciences; 2013."
+    },
+    {
+      "slug": "psychology-can-the-same-choice-feel-different",
+      "title": "Can the same choice feel different?",
+      "subject": "Psychology",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "When does a change in wording alter a decision without changing the underlying outcomes?",
+      "concepts": [
+        "reference point",
+        "gain/loss frame",
+        "risk",
+        "invariance"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A decision frame presents outcomes relative to a reference point. Tversky and Kahneman demonstrated that equivalent descriptions can shift preferences between certain and risky options. The important comparison holds outcomes and probabilities fixed while changing their presentation. Not every wording difference is an irrational bias: language may also change what people infer about the situation. [S24]"
+      ],
+      "example": "In a fictional campus fund, option A guarantees preserving INR 20,000 from INR 60,000. Option B has a one-third chance of preserving all INR 60,000 and otherwise preserves nothing. Reframe these as amounts lost while keeping every probability fixed. Check whether your preference changes and explain why.",
+      "limitation": "Do not infer a person's permanent risk preference from one answer. Real choices may include ambiguity, emotion, or information not contained in a simplified experiment. [S24]",
+      "questions": [
+        "Are the two descriptions mathematically equivalent?",
+        "What reference point makes the outcome a gain or a loss?",
+        "Could wording convey extra information rather than only alter framing?"
+      ],
+      "teachBack": "Explain a framing effect while holding outcomes and probabilities constant.",
+      "application": "Rewrite a subscription cancellation notice neutrally, then identify any meaningful facts that must not be hidden.",
+      "objectives": [
+        "Verify equivalent outcomes and probabilities.",
+        "Identify the reference point.",
+        "Separate a descriptive effect from a blanket judgment about rationality."
+      ],
+      "reviewLater": "Why must you establish equivalence before claiming a framing effect?",
+      "connection": "Economics and business: pricing communication, choice architecture, and consumer autonomy.",
+      "sourceIds": [
+        "S24"
+      ],
+      "sourceDetail": "S24 The Framing of Decisions and the Psychology of Choice - Amos Tversky and Daniel Kahneman; 1981-01-30."
+    },
+    {
+      "slug": "psychology-why-does-one-dissenter-matter",
+      "title": "Why does one dissenter matter?",
+      "subject": "Psychology",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "When do people follow a group despite having evidence against it?",
+      "concepts": [
+        "conformity",
+        "unanimity",
+        "public response",
+        "social pressure"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Asch's line-judgment experiments examined public answers made in the presence of a unanimous group giving wrong judgments. The results showed social influence, while variations highlighted that unanimity and support matter. The lesson is not that everyone always abandons perception: distinguish following a group publicly, privately changing belief, and treating others as useful information. [S25]"
+      ],
+      "example": "A fictional project team publicly supports an implausible forecast. Before giving your answer, write a private estimate and its evidence. Compare how an anonymous vote, a public vote, and one openly dissenting teammate might change the discussion. This is a teaching scenario, not a replication study.",
+      "limitation": "A historical laboratory study cannot supply a universal conformity percentage for every culture or workplace. Influence can also be rational when other people hold relevant evidence. [S25]",
+      "questions": [
+        "What separates public compliance from private belief?",
+        "Why might an ally alter the cost of dissent?",
+        "When would the group's information justify revising your original answer?"
+      ],
+      "teachBack": "Explain one mechanism of conformity and one boundary condition.",
+      "application": "Redesign a team decision process so evidence can surface before people learn the leader's preference.",
+      "objectives": [
+        "Distinguish compliance from belief change.",
+        "Explain the role of unanimity or support.",
+        "Design an intervention without assuming all influence is irrational."
+      ],
+      "reviewLater": "Why can identical public answers conceal different private beliefs?",
+      "connection": "Culture and society: norms, private disagreement, and public signals.",
+      "sourceIds": [
+        "S25"
+      ],
+      "sourceDetail": "S25 Opinions and Social Pressure - Solomon E. Asch; 1955-11."
+    },
+    {
+      "slug": "business-and-strategy-strategy-is-also-what-you-refuse-to-do",
+      "title": "Strategy is also what you refuse to do",
+      "subject": "Business and Strategy",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "Why is being operationally better not the same as having a strategy?",
+      "concepts": [
+        "positioning",
+        "value proposition",
+        "trade-off",
+        "activity fit"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A strategy selects whom to serve, what value to offer, and which linked activities will deliver it. Operational improvements can be valuable without creating a distinctive position. Activities that reinforce one another can make imitation difficult; trade-offs explain why a competitor cannot simply add every attractive feature without affecting the system. [S26, S27] A credible strategy therefore specifies choices and consequences rather than only ambitions such as becoming the best brand."
+      ],
+      "example": "An invented skincare company targets beginners with three simple products, assisted routine selection, and predictable replenishment. Adding constant trend launches may attract another segment while increasing complexity and weakening that promise. Map the change through inventory, education, and repeat purchase before recommending it.",
+      "limitation": "A trade-off is not an excuse to ignore changed customer needs. A coherent activity system can become obsolete; distinctiveness must still create value. [S26, S27]",
+      "questions": [
+        "Which customer and need does the company prioritize?",
+        "What does this choice make harder to offer?",
+        "Which activities reinforce the promise, and what could invalidate it?"
+      ],
+      "teachBack": "Explain the company's position, one trade-off, and two reinforcing activities.",
+      "application": "Propose a strategy for a campus meal service. Name one attractive opportunity it should decline and why.",
+      "objectives": [
+        "Specify customer value rather than an aspiration.",
+        "Trace a genuine trade-off.",
+        "Connect activities and identify a condition requiring reconsideration."
+      ],
+      "reviewLater": "How does an operational improvement differ from a distinctive activity system?",
+      "connection": "Creativity and economics: constraints, opportunity costs, and coherent choices.",
+      "sourceIds": [
+        "S26",
+        "S27"
+      ],
+      "sourceDetail": "S26 Creating a Successful Strategy - Harvard Business School, Institute for Strategy and Competitiveness; date not established. S27 Making Strategic Trade-offs - Harvard Business School, Institute for Strategy and Competitiveness; date not established."
+    },
+    {
+      "slug": "business-and-strategy-is-this-really-a-network-effect",
+      "title": "Is this really a network effect?",
+      "subject": "Business and Strategy",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "Does adding users improve the product for other users, or merely reduce your costs?",
+      "concepts": [
+        "direct network effect",
+        "cross-side effect",
+        "economies of scale",
+        "congestion"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A network effect exists when a participant's value depends on the participation of others. Direct effects operate within a group; indirect effects can connect distinct groups such as buyers and sellers. Economies of scale instead concern how costs change with output. Growth may create both, neither, or a negative effect if congestion or low quality increases. [S28] Diagnose the mechanism before calling user growth a moat."
+      ],
+      "example": "For an invented campus marketplace, more relevant sellers may improve buyer choice, while more buyers attract sellers. Adding distant sellers who cannot deliver may create little local value. Separately, buying packaging in bulk reduces cost without necessarily making the marketplace more useful to existing buyers.",
+      "limitation": "More participants do not guarantee winner-take-all outcomes. Relevance, geographic density, congestion, and the ease of using competing services can limit defensibility. [S28]",
+      "questions": [
+        "Whose experience improves when which users join?",
+        "Is the benefit demand-side value or a supply-side cost saving?",
+        "At what point might additional participation reduce value?"
+      ],
+      "teachBack": "Distinguish a direct effect, a cross-side effect, and a scale economy.",
+      "application": "Compare a language-learning app with a campus meetup app. Identify a possible network effect for each and a case in which it would be weak.",
+      "objectives": [
+        "Identify the participant-to-participant value mechanism.",
+        "Separate network effects from falling average cost.",
+        "Recognize congestion, relevance, and competing-platform limits."
+      ],
+      "reviewLater": "Why is total user count sometimes less informative than relevant local density?",
+      "connection": "Economics and technology: matching markets and feedback loops.",
+      "sourceIds": [
+        "S28"
+      ],
+      "sourceDetail": "S28 What Are Network Effects? - Harvard Business School Online; 2020."
+    },
+    {
+      "slug": "business-and-strategy-can-growing-sales-make-a-business-worse",
+      "title": "Can growing sales make a business worse?",
+      "subject": "Business and Strategy",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "What must you know before calling a growing business healthy?",
+      "concepts": [
+        "net revenue",
+        "contribution margin",
+        "acquisition cost",
+        "cohort retention"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Revenue growth is not the same as profit growth. Contribution per unit subtracts relevant variable costs from net selling revenue and helps assess how sales cover fixed costs. A business with negative contribution can lose more as volume rises unless its economics change. [S29] Acquisition and customer measures also need explicit definitions: real disclosures can use company-specific denominators and cost categories. Do not compare labels without reading them. [S30]"
+      ],
+      "example": "For an invented D2C order, net revenue is INR 600; product, fulfillment, and expected return costs total INR 450, leaving INR 150 before acquisition and fixed costs. If acquisition costs INR 240 per new buyer, the first order leaves an INR 90 gap. A second similarly profitable order may cover it, but only if repeat purchase and timing actually support that expectation.",
+      "limitation": "Contribution is not net profit or cash flow. Long-run customer-value estimates can hide weak retention, omitted costs, and slow payback. Historical company disclosures are examples of measurement, not current investment recommendations.",
+      "questions": [
+        "Which costs belong in your contribution definition?",
+        "What repeat behavior would recover acquisition cost?",
+        "How do refunds, working capital, and fixed overhead change the picture?"
+      ],
+      "teachBack": "Explain contribution, acquisition payback, and one reason a revenue chart can mislead.",
+      "application": "Evaluate an invented promotion that doubles orders while cutting contribution per order from INR 150 to INR 40 and increasing acquisition costs.",
+      "objectives": [
+        "Calculate and label the contribution measure.",
+        "Separate revenue, profit, and cash.",
+        "Test acquisition recovery against observed retention rather than wishful averages."
+      ],
+      "reviewLater": "Which missing cohort fact makes a lifetime-value claim impossible to judge?",
+      "connection": "Economics and science: price response and honest measurement.",
+      "sourceIds": [
+        "S29",
+        "S30"
+      ],
+      "sourceDetail": "S29 3.2 Calculate a Break-Even Point in Units and Dollars - OpenStax, Principles of Accounting Volume 2: Managerial Accounting; 2019, textbook. S30 Warby Parker Inc. Prospectus, Form 424B4 - Warby Parker Inc.; US SEC EDGAR; 2021."
+    },
+    {
+      "slug": "history-did-one-invention-change-the-world-by-itself",
+      "title": "Did one invention change the world by itself?",
+      "subject": "History",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "Why did printing spread differently across societies?",
+      "concepts": [
+        "historical comparison",
+        "movable type",
+        "adoption",
+        "technological determinism"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Printing histories should not begin and end with one European inventor. Columbia's account situates block printing and movable type in East Asian developments and discusses why different methods had different costs and uses. [S31] The Gutenberg Bible provides a major European artifact within this longer history. [S32] A historical explanation distinguishes invention, adoption, distribution, readership, and institutional responses. A technology enables possibilities; its social effects depend on conditions in which people use it."
+      ],
+      "example": "Compare two hypothetical societies with identical printing hardware: one has cheap paper, literate readers, and trading networks; the other lacks these. Predict different adoption paths. Then ask which actual historical sources would be needed to test each proposed condition.",
+      "limitation": "Avoid both a single-genius origin myth and a simple diffusion story that erases local innovations. Do not assert that printing automatically creates literacy, democracy, or freedom. [S31, S32]",
+      "questions": [
+        "What is the difference between invention and widespread adoption?",
+        "Which complementary conditions would matter?",
+        "How would you compare regions without selecting only convenient examples?"
+      ],
+      "teachBack": "Explain printing as a historical system with more than one regional trajectory.",
+      "application": "Assess the claim that smartphones inevitably democratize knowledge using the same invention-versus-adoption framework.",
+      "objectives": [
+        "Locate European printing in a wider chronology.",
+        "Identify adoption conditions and mechanisms.",
+        "Avoid treating technological effects as inevitable."
+      ],
+      "reviewLater": "What evidence would distinguish technological possibility from a demonstrated social consequence?",
+      "connection": "Technology and culture: comparing printing with AI without claiming identical histories.",
+      "sourceIds": [
+        "S31",
+        "S32"
+      ],
+      "sourceDetail": "S31 Printing: China in 1000 CE - Columbia University, Asia for Educators; date not established. S32 The Gutenberg Bible - Library of Congress, Bible Collection; date not established."
+    },
+    {
+      "slug": "history-why-did-industrialization-begin-in-britain",
+      "title": "Why did industrialization begin in Britain?",
+      "subject": "History",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "How do historians choose between plausible explanations of the same transformation?",
+      "concepts": [
+        "induced invention",
+        "relative factor prices",
+        "regional comparison",
+        "contingency"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Allen argues that Britain's relatively high wages and cheap energy created incentives for labor-saving, energy-using inventions. This is an explanation of why certain technologies paid there, not merely who first imagined them. [S33] Pomeranz's comparative account emphasizes coal, colonial resources, and the importance of comparing advanced regions with advanced regions rather than Europe's richest areas with all of Asia. [S34] The accounts highlight different mechanisms and evidence; they need not be treated as perfectly exclusive."
+      ],
+      "example": "Imagine the same machine available in two regions. It saves ten labor-days but uses costly fuel. Changing wages and fuel prices can reverse its profitability. Now add access to imported raw materials. Identify which part of the explanation each change addresses.",
+      "limitation": "The weight assigned to wages, energy, institutions, empire, knowledge, and chronology remains contested. Do not reduce industrialization to cultural superiority or one numerical cause. [S33, S34]",
+      "questions": [
+        "What does the relative-price explanation predict?",
+        "Why does the choice of comparison regions matter?",
+        "What evidence would weaken either explanation?"
+      ],
+      "teachBack": "Compare two mechanisms and specify what evidence could discriminate between them.",
+      "application": "Evaluate an invented claim that one country adopted automation only because its entrepreneurs were more imaginative. Propose economic and institutional alternatives.",
+      "objectives": [
+        "State both explanations accurately.",
+        "Use an explicit comparison and counterfactual.",
+        "Recognize debate and interaction among causes."
+      ],
+      "reviewLater": "Why is explaining profitability of adoption different from explaining invention alone?",
+      "connection": "Economics and creativity: incentives, invention, and constrained historical choices.",
+      "sourceIds": [
+        "S33",
+        "S34"
+      ],
+      "sourceDetail": "S33 Why the Industrial Revolution Was British: Commerce, Induced Invention, and the Scientific Revolution - Robert C. Allen; 2011-04-12. S34 Kenneth Pomeranz - American Historical Association; date not established."
+    },
+    {
+      "slug": "history-whose-story-becomes-history",
+      "title": "Whose story becomes history?",
+      "subject": "History",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "What can an official record and a survivor's testimony each reveal about Partition?",
+      "concepts": [
+        "provenance",
+        "oral history",
+        "corroboration",
+        "scale of explanation"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Partition in 1947 accompanied independence and the creation of India and Pakistan, with major displacement and violence. Scholarly discussion and oral-history collections help examine experiences that broad administrative narratives can overlook. [S35, S36] Historical reasoning asks who produced a source, when, for whom, and under what constraints. A personal memory can illuminate lived experience without representing every community; an official document can establish a decision without providing a neutral account of its consequences."
+      ],
+      "example": "Use an explicitly invented exercise: an administrative memo describes an orderly border plan while a later interview describes a family's confusion. They may address different scales, dates, or locations. List the additional evidence needed before declaring one false. For production, select and check actual sources rather than presenting these invented materials as documents.",
+      "limitation": "Memory is selective and archives are also selective. Do not impose a single community-wide story, turn traumatic testimony into spectacle, or claim that an interview was watched when only the collection gateway was accessed.",
+      "questions": [
+        "Who made the source, and what could they know?",
+        "Could the two accounts both be accurate within their scope?",
+        "What corroboration would clarify the apparent disagreement?"
+      ],
+      "teachBack": "Explain how provenance, scope, and corroboration change your interpretation.",
+      "application": "Design a comparison of one archival document and one oral history. Specify the research question and what neither source can settle alone.",
+      "objectives": [
+        "Assess provenance without dismissing testimony.",
+        "Distinguish individual experience from population claims.",
+        "Seek corroboration and acknowledge unrepresented perspectives."
+      ],
+      "reviewLater": "Why does emotional vividness neither prove nor disprove historical representativeness?",
+      "connection": "Literature and science: perspective, evidence, and responsible inference.",
+      "sourceIds": [
+        "S35",
+        "S36"
+      ],
+      "sourceDetail": "S35 Partition of 1947 Continues to Haunt India, Pakistan - Stanford University, Stanford Report; 2019-03. S36 Collections and Oral History Resources - The 1947 Partition Archive; date not established."
+    },
+    {
+      "slug": "economics-will-a-lower-price-actually-help",
+      "title": "Will a lower price actually help?",
+      "subject": "Economics",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "When does cutting price increase revenue, and why might profit still fall?",
+      "concepts": [
+        "price elasticity",
+        "percentage change",
+        "total revenue",
+        "profit"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Price elasticity describes the percentage response of quantity demanded to a percentage price change. With elastic demand, a price reduction can raise revenue because the quantity response more than offsets the lower price. Inelastic demand gives the opposite revenue relationship. Revenue is still distinct from profit because costs also change. [S37] State whether you mean a local estimate or an observed finite change; substitutions, timing, and the starting price matter."
+      ],
+      "example": "An invented event sells 100 tickets at INR 500, yielding INR 50,000. At INR 450 it sells 120, yielding INR 54,000. Revenue rises, but if each attendee creates INR 250 in variable costs, contribution falls from INR 25,000 to INR 24,000. The arithmetic demonstrates why revenue growth does not settle the decision.",
+      "limitation": "An observed before/after change is not automatically a causal demand curve: advertising, seasonality, and capacity may also change. Elasticity varies across ranges and horizons.",
+      "questions": [
+        "Which percentage quantities enter elasticity?",
+        "Why did contribution fall in the example?",
+        "How would you isolate the effect of price from a simultaneous campaign?"
+      ],
+      "teachBack": "Explain elasticity and distinguish its revenue implication from its profit implication.",
+      "application": "Choose a price-test design for an invented subscription. State the outcome, comparison, and cost information needed.",
+      "objectives": [
+        "Reason in proportional rather than absolute changes.",
+        "Calculate revenue and labeled contribution.",
+        "Recognize context and causal-estimation limits."
+      ],
+      "reviewLater": "Why might a price cut raise revenue but lower contribution?",
+      "connection": "Business and science: pricing decisions and controlled comparisons.",
+      "sourceIds": [
+        "S37"
+      ],
+      "sourceDetail": "S37 5.3 Elasticity and Pricing - OpenStax, Principles of Economics 3e; 2022, textbook."
+    },
+    {
+      "slug": "economics-when-does-a-cheap-choice-become-expensive-for-everyone",
+      "title": "When does a cheap choice become expensive for everyone?",
+      "subject": "Economics",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "Why can individually sensible transactions produce social costs?",
+      "concepts": [
+        "external effect",
+        "private cost",
+        "social cost",
+        "policy trade-off"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "An external effect arises when a decision affects others in ways not fully captured by the decision-maker's contracts or prices. Private incentives can then encourage too much of a harmful activity or too little of a beneficial one. Policy can change incentives through prices, quantities, standards, or institutions. [S38] The key is to identify the mechanism and who bears the effect rather than label every disliked outcome a market failure."
+      ],
+      "example": "An invented factory pays for fuel but not the noise disturbing nearby students. A noise charge, operating-hour rule, or negotiated insulation agreement changes different margins. Compare how each affects incentives, monitoring needs, and the distribution of costs.",
+      "limitation": "Identifying an externality does not prove one policy is best. Measurement, enforcement, bargaining power, administrative costs, and distributional consequences matter. [S38]",
+      "questions": [
+        "Which cost is missing from the decision-maker's calculation?",
+        "What behavior would each proposed policy change?",
+        "Who might gain or lose even if total harm falls?"
+      ],
+      "teachBack": "Trace a private decision into an unpriced effect and compare two remedies.",
+      "application": "Design a policy for congestion around a campus. Compare a fee with a rule and state what evidence you would collect.",
+      "objectives": [
+        "Identify an external effect specifically.",
+        "Explain a remedy through incentives and implementation.",
+        "Consider efficiency, fairness, and monitoring separately."
+      ],
+      "reviewLater": "Why is identifying a market failure only the start of policy analysis?",
+      "connection": "Culture and society: governance and collective effects.",
+      "sourceIds": [
+        "S38"
+      ],
+      "sourceDetail": "S38 Unit 12: Markets, Efficiency, and Public Policy - CORE Econ, The Economy 1.0; 2017, textbook."
+    },
+    {
+      "slug": "economics-why-do-people-compete-when-cooperation-would-help",
+      "title": "Why do people compete when cooperation would help?",
+      "subject": "Economics",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "How can individually attractive choices create a collectively worse outcome?",
+      "concepts": [
+        "payoff matrix",
+        "dominant strategy",
+        "Nash equilibrium",
+        "repeated interaction"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A game specifies players, strategies, and payoffs. In a prisoners' dilemma, each player's individually dominant move produces a worse joint outcome than mutual cooperation. A Nash equilibrium describes mutual best responses, not necessarily fairness or social efficiency. Repetition, observability, preferences, and institutions can change incentives; repetition alone does not guarantee cooperation. [S39]"
+      ],
+      "example": "In an invented two-person cleanup game, both cleaning gives each 3 points, neither cleaning gives each 1, and unilateral cleaning gives the cleaner 0 and the non-cleaner 4. Check every best response. Then add a credible future reward for mutual cleaning and examine what else must be known.",
+      "limitation": "The model's conclusion depends on the payoffs and information. Real people may value fairness, reputation, or others' wellbeing; these can be represented rather than dismissed as irrationality. [S39]",
+      "questions": [
+        "What is your best response to each possible move?",
+        "Why is mutual cooperation not an equilibrium under the stated payoffs?",
+        "What would make a future punishment credible rather than an empty threat?"
+      ],
+      "teachBack": "Explain how individually dominant choices can create a worse collective result.",
+      "application": "Model an invented pair of sellers deciding whether to honor a shared sustainability commitment. State the payoffs and a feasible enforcement mechanism.",
+      "objectives": [
+        "Find best responses from explicit payoffs.",
+        "Separate equilibrium from collective welfare.",
+        "Explain what changes incentives rather than asserting cooperation."
+      ],
+      "reviewLater": "How does a Nash equilibrium differ from a socially preferred outcome?",
+      "connection": "Psychology and culture: social preferences, trust, and institutional design.",
+      "sourceIds": [
+        "S39"
+      ],
+      "sourceDetail": "S39 Unit 4: Social Interactions - CORE Econ, The Economy 1.0; 2017, textbook."
+    },
+    {
+      "slug": "technology-and-ai-why-can-an-ai-answer-sound-right-and-be-wrong",
+      "title": "Why can an AI answer sound right and be wrong?",
+      "subject": "Technology and AI",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "What is the difference between generating plausible language and establishing a fact?",
+      "concepts": [
+        "language modeling",
+        "attention",
+        "confabulation",
+        "grounding"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Transformer architectures use attention to compute context-sensitive representations; the original paper is an architectural foundation, not a guarantee of truthfulness. [S40] A language model can generate coherent claims without those claims being supported. NIST describes confident false or erroneous generative output as confabulation. [S41] Retrieval and citations can help, but a citation must exist, be relevant, and actually support the claim. Evaluate a model's demonstrated performance rather than inferring either complete understanding or complete inability from a slogan about prediction."
+      ],
+      "example": "An invented tutor cites a real paper but claims it tested a method absent from that paper. Checking that the URL opens is insufficient. Compare the exact claim, study design, and conclusion; distinguish a real reference from a supporting reference.",
+      "limitation": "Current systems have varied architectures and training procedures. The 2017 Transformer paper does not describe every modern model, and fluent output alone cannot settle philosophical questions about understanding.",
+      "questions": [
+        "Which evidence would establish that a citation supports a claim?",
+        "Why is architectural capability different from factual reliability?",
+        "When should the tutor say it does not know?"
+      ],
+      "teachBack": "Explain plausible generation, grounding, and verification as three different things.",
+      "application": "Design a verification checklist for an AI-generated explanation of a biology paper.",
+      "objectives": [
+        "Distinguish a generated assertion from evidence.",
+        "Check claim-to-source support.",
+        "Avoid overclaiming what architecture implies about understanding."
+      ],
+      "reviewLater": "What can go wrong even when every linked source is real?",
+      "connection": "Philosophy and science: justified belief and reproducible evidence.",
+      "sourceIds": [
+        "S40",
+        "S41"
+      ],
+      "sourceDetail": "S40 Attention Is All You Need - Ashish Vaswani and seven coauthors, Google Research / NIPS; 2017. S41 AI RMF: Generative Artificial Intelligence Profile, NIST AI 600-1 - Chloe Autio and colleagues, NIST; 2024-07-26."
+    },
+    {
+      "slug": "technology-and-ai-did-the-model-learn-or-just-memorize-the-test",
+      "title": "Did the model learn, or just memorize the test?",
+      "subject": "Technology and AI",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "Why can excellent test results disappear in real use?",
+      "concepts": [
+        "training set",
+        "validation set",
+        "test set",
+        "overfitting"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Training data fit a model; validation data help choose among versions; a held-out test set estimates performance after those choices. Repeatedly choosing models based on the test set lets information about that test influence development. [S42] Overfitting means fitting observed examples in ways that fail to generalize well to unseen cases. [S43] Leakage and deployment mismatch are additional concerns: even an honestly held-out test can represent the wrong population or time period."
+      ],
+      "example": "An invented review classifier sees nearly identical reviews in both training and test sets. It scores highly by recognizing duplicates. Split by the entity or time boundary relevant to deployment, then test a genuinely new batch. Explain why a random row split was misleading here.",
+      "limitation": "A holdout is necessary in many workflows but not sufficient for deployment reliability. There is no universal accuracy threshold, and repeated testing can contaminate an initially clean estimate. [S42, S43]",
+      "questions": [
+        "What role does each data split play?",
+        "Where did information about the evaluation enter training or selection?",
+        "Which new population or time period should the final evaluation represent?"
+      ],
+      "teachBack": "Explain overfitting and leakage without treating them as identical concepts.",
+      "application": "Design an evaluation for a campus attendance model that will be used next semester, avoiding student and time leakage.",
+      "objectives": [
+        "Separate fitting, selection, and final evaluation.",
+        "Identify a specific leakage route.",
+        "Align the evaluation population and time with the intended use."
+      ],
+      "reviewLater": "How can a technically held-out dataset still be a poor deployment test?",
+      "connection": "Science and learning: passing a familiar test versus transferring knowledge.",
+      "sourceIds": [
+        "S42",
+        "S43"
+      ],
+      "sourceDetail": "S42 Datasets: Dividing the Original Dataset - Google Machine Learning Crash Course; date not established. S43 Overfitting - Google Machine Learning Crash Course; date not established."
+    },
+    {
+      "slug": "technology-and-ai-does-your-feed-discover-your-interests-or-shape-them",
+      "title": "Does your feed discover your interests or shape them?",
+      "subject": "Technology and AI",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "How can recommendations change the very data used to learn preferences?",
+      "concepts": [
+        "candidate generation",
+        "ranking",
+        "proxy objective",
+        "feedback loop"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A historical YouTube paper describes a two-stage system that selects candidates and ranks them. This makes recommendation a process of choosing exposure, not simply observing an untouched preference. [S44] Research using simulated recommendation systems shows how learning from data already shaped by earlier recommendations can create algorithmic confounding and undesirable feedback. [S45] A click can reflect what was offered as well as what someone would have chosen from all possibilities."
+      ],
+      "example": "An invented learning feed promotes only science clips. The user clicks science because little else appears. A naive model reads the clicks as evidence of exclusive preference and further narrows exposure. Compare that interpretation with occasional exploration and an explicit satisfaction question.",
+      "limitation": "The 2016 architecture is not a claim about today's YouTube. Simulation results do not establish that every recommender necessarily creates the same psychological or social outcome. [S44, S45]",
+      "questions": [
+        "What alternatives did the user actually see?",
+        "Which optimization target is only a proxy for user benefit?",
+        "How could exploration or a different outcome measure test your explanation?"
+      ],
+      "teachBack": "Trace the exposure-action-training loop and identify one confounding route.",
+      "application": "Design a Depth Lab recommendation rule balancing familiar interests, learning gaps, and unfamiliar subjects. Explain how you would assess benefit beyond clicks.",
+      "objectives": [
+        "Explain both exposure and observed response.",
+        "Separate proxy objectives from intended value.",
+        "Propose an evaluation or exploration mechanism and acknowledge its limits."
+      ],
+      "reviewLater": "Why can optimizing engagement reduce the information available about what users truly value?",
+      "connection": "Culture, psychology, and business: attention, preference formation, and incentives.",
+      "sourceIds": [
+        "S44",
+        "S45"
+      ],
+      "sourceDetail": "S44 Deep Neural Networks for YouTube Recommendations - Paul Covington, Jay Adams, Emre Sargin; 2016. S45 How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility - Allison J. B. Chaney, Brandon M. Stewart, Barbara E. Engelhardt; 2017 preprint; 2018 RecSys paper."
+    },
+    {
+      "slug": "culture-and-society-what-if-everyone-follows-a-rule-nobody-likes",
+      "title": "What if everyone follows a rule nobody likes?",
+      "subject": "Culture and Society",
+      "sequence": 1,
+      "stage": "foundation",
+      "question": "How can public conformity survive private disagreement?",
+      "concepts": [
+        "descriptive expectation",
+        "normative expectation",
+        "sanction",
+        "pluralistic ignorance"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A social norm involves expectations about what others do and, in relevant cases, what they think one should do. Public compliance can coexist with private disagreement. Under pluralistic ignorance, people misread others' visible behavior as genuine endorsement and act on that mistaken expectation. [S46] Distinguish a norm from a habit, an explicit law, and a pattern driven mainly by material incentives."
+      ],
+      "example": "In an invented campus group, nearly everyone dislikes meetings beginning an hour late but assumes others enjoy the informal start. Compare private anonymous reports with public statements. Then ask whether people would change if they learned the true preferences, or if other incentives still maintain lateness.",
+      "limitation": "Not every unpopular practice is sustained by mistaken beliefs. Power, coordination costs, sanctions, and conflicting interests can persist even when everyone understands others' views. [S46]",
+      "questions": [
+        "What do people believe others do, and what do they believe others approve?",
+        "How could you measure private preference without assuming honest public reporting?",
+        "What would prevent change even after beliefs were corrected?"
+      ],
+      "teachBack": "Explain pluralistic ignorance and distinguish it from ordinary disagreement.",
+      "application": "Design a non-coercive test of whether a fictional campus custom is sustained by mistaken expectations.",
+      "objectives": [
+        "Separate empirical and normative expectations.",
+        "Explain a belief-behavior feedback mechanism.",
+        "Recognize power and incentive alternatives."
+      ],
+      "reviewLater": "Why might revealing private preferences fail to change a norm?",
+      "connection": "Psychology and economics: public signals, conformity, and coordination.",
+      "sourceIds": [
+        "S46"
+      ],
+      "sourceDetail": "S46 Social Norms - Stanford Encyclopedia of Philosophy; 2018-09-24, substantive revision."
+    },
+    {
+      "slug": "culture-and-society-is-opportunity-only-about-individual-merit",
+      "title": "Is opportunity only about individual merit?",
+      "subject": "Culture and Society",
+      "sequence": 2,
+      "stage": "mechanism",
+      "question": "How can networks shape access without making every friendship a career transaction?",
+      "concepts": [
+        "social capital",
+        "economic connectedness",
+        "exposure",
+        "friendship formation"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "Social capital includes different network features rather than a single stock of useful contacts. In US Facebook-based research, cross-class economic connectedness was strongly associated with upward mobility; cohesion and civic participation were distinct measures. [S47] A companion study separates opportunities to encounter people from different socioeconomic groups from friendship formation conditional on exposure. [S48] This shifts discussion from individual networking slogans toward the structure of schools, groups, and shared activities."
+      ],
+      "example": "Two fictional student clubs are equally diverse on paper. One assigns mixed members meaningful shared projects; the other separates everyone into familiar subgroups. Compare exposure with actual relationship formation, and identify which outcomes and preferences would need to be measured.",
+      "limitation": "The findings are observational and US-specific. They do not prove that assigning one high-income friend raises a person's earnings, or that results transfer unchanged to India. Avoid reducing people to networking assets. [S47, S48]",
+      "questions": [
+        "Which form of social capital are you measuring?",
+        "Can people share a building without developing cross-group relationships?",
+        "What design would test an institutional intervention more credibly?"
+      ],
+      "teachBack": "Distinguish connectedness, exposure, and causal claims about opportunity.",
+      "application": "Propose an inclusive mentorship or shared-project program, with a measurable outcome and safeguards against tokenistic mixing.",
+      "objectives": [
+        "Distinguish network measures.",
+        "Explain exposure versus relationship formation.",
+        "Qualify causal and geographic generalization."
+      ],
+      "reviewLater": "Why is diversity of attendance different from diversity of meaningful relationships?",
+      "connection": "History and business: institutions, access, and how opportunity is distributed.",
+      "sourceIds": [
+        "S47",
+        "S48"
+      ],
+      "sourceDetail": "S47 Social Capital I: Measurement and Associations With Economic Mobility - Raj Chetty and colleagues, Opportunity Insights / Nature; 2022-08. S48 Social Capital II: Determinants of Economic Connectedness - Raj Chetty and colleagues, Opportunity Insights / Nature; 2022-08."
+    },
+    {
+      "slug": "culture-and-society-must-shared-resources-end-in-a-tragedy",
+      "title": "Must shared resources end in a tragedy?",
+      "subject": "Culture and Society",
+      "sequence": 3,
+      "stage": "synthesis",
+      "question": "What lets a community sustain a resource that everyone can overuse?",
+      "concepts": [
+        "common-pool resource",
+        "open access",
+        "monitoring",
+        "collective rules"
+      ],
+      "minutes": 12,
+      "explanation": [
+        "A common-pool resource is difficult to exclude people from using, and one person's use reduces availability to others. That does not mean every shared resource is unmanaged open access. Ostrom's institutional work examines user-developed rules, boundaries, monitoring, proportionate sanctions, and ways to resolve conflict. [S49, S50] The question becomes which arrangements work under which conditions, rather than assuming only privatization or central control can prevent overuse."
+      ],
+      "example": "In an invented community water tank, unrestricted withdrawal depletes supply. Compare that with agreed withdrawal limits, visible measurement, a low-cost appeals process, and proportionate responses to repeated violations. Ask who can participate in making rules and who might be unfairly excluded.",
+      "limitation": "Local governance is not automatically fair or effective. Power asymmetry, external pressure, ecological change, and scale can undermine an institution; a checklist alone does not guarantee success. [S49, S50]",
+      "questions": [
+        "What makes the resource subtractable and difficult to exclude?",
+        "Who monitors whom, and why might users accept the rules?",
+        "How would your system handle a powerful violator or a drought?"
+      ],
+      "teachBack": "Explain the difference between an unmanaged open-access resource and a governed commons.",
+      "application": "Design rules for a shared campus rehearsal room. Specify boundaries, fair access, monitoring, sanctions, and an appeal process.",
+      "objectives": [
+        "Distinguish common-pool resources from all shared goods.",
+        "Link rules to incentives, monitoring, and legitimacy.",
+        "Test a governance proposal against power and changing conditions."
+      ],
+      "reviewLater": "Why does diagnosing a collective-action problem not determine the best governance arrangement?",
+      "connection": "Economics, history, and psychology: institutions make collective action possible but remain contestable.",
+      "sourceIds": [
+        "S49",
+        "S50"
+      ],
+      "sourceDetail": "S49 Ostrom Design Principles - Ostrom Workshop, Indiana University; date not established. S50 Design Principles and Threats to Sustainable Organizations That Manage Commons - Elinor Ostrom; Indiana University Digital Library of the Commons; 1999."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "The Analysis of Knowledge",
+      "author": "Stanford Encyclopedia of Philosophy",
+      "revised": "2026-01-21, substantive revision",
+      "url": "https://plato.stanford.edu/entries/knowledge-analysis/index.html",
+      "whyUseful": "Explains justified true belief, epistemic luck, and Gettier objections.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S02",
+      "title": "Personal Identity",
+      "author": "Stanford Encyclopedia of Philosophy",
+      "revised": "2023-06-30, substantive revision",
+      "url": "https://plato.stanford.edu/entries/identity-personal/",
+      "whyUseful": "Compares psychological continuity and biological accounts of persistence.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S03",
+      "title": "Doing vs. Allowing Harm",
+      "author": "Stanford Encyclopedia of Philosophy",
+      "revised": "2025-07-08, substantive revision",
+      "url": "https://plato.stanford.edu/entries/doing-allowing/",
+      "whyUseful": "Shows why outcomes, agency, and intention raise distinct ethical questions.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S04",
+      "title": "6.1 Correlation and Causation",
+      "author": "UC Berkeley, Sense & Sensibility & Science",
+      "revised": "Date not established",
+      "url": "https://sensibility.berkeley.edu/index.php?title=6.1_Correlation_and_Causation",
+      "whyUseful": "Introduces interventions, confounding, and randomized experiments.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S05",
+      "title": "Reproducibility and Replicability in Science: Highlights",
+      "author": "National Academies of Sciences, Engineering, and Medicine",
+      "revised": "2019-05",
+      "url": "https://nap.nationalacademies.org/resource/25303/R%26R.pdf",
+      "whyUseful": "Provides explicit definitions and reasons for inconsistent results.",
+      "accessStatus": "Public four-page institutional highlights PDF accessed; not the entire consensus report.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S06",
+      "title": "ASA Releases Statement on Statistical Significance and P-Values",
+      "author": "American Statistical Association",
+      "revised": "2016-03-07",
+      "url": "https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf",
+      "whyUseful": "Corrects common interpretations of statistical significance.",
+      "accessStatus": "Public three-page statement accessed.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S07",
+      "title": "4.7 Entropy on a Microscopic Scale",
+      "author": "OpenStax, University Physics Volume 2",
+      "revised": "2016, textbook",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/4-7-entropy-on-a-microscopic-scale",
+      "whyUseful": "Explains microstates, macrostates, and statistical entropy.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S08",
+      "title": "6.3 The Laws of Thermodynamics",
+      "author": "OpenStax, Biology 2e",
+      "revised": "2018, textbook",
+      "url": "https://openstax.org/books/biology-2e/pages/6-3-the-laws-of-thermodynamics",
+      "whyUseful": "Connects energy transfer, living systems, and the second law.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S09",
+      "title": "Antimicrobial Resistance: Causes and How It Spreads",
+      "author": "US Centers for Disease Control and Prevention",
+      "revised": "Date not established",
+      "url": "https://www.cdc.gov/antimicrobial-resistance/causes/",
+      "whyUseful": "Explains resistance, selection pressure, and transmission without implying that human bodies become resistant.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S10",
+      "title": "Epigenomics Fact Sheet",
+      "author": "National Human Genome Research Institute, NIH",
+      "revised": "Date not established",
+      "url": "https://www.genome.gov/about-genomics/fact-sheets/Epigenomics-Fact-Sheet",
+      "whyUseful": "Explains gene regulation and epigenetic marks without changing DNA sequence.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S11",
+      "title": "What Is Heritability?",
+      "author": "MedlinePlus Genetics, US National Library of Medicine",
+      "revised": "Date not established",
+      "url": "https://medlineplus.gov/genetics/understanding/inheritance/heritability/",
+      "whyUseful": "Explains why population heritability is not an individual destiny percentage.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S12",
+      "title": "Microbiome Epidemiology and Association Studies in Human Health",
+      "author": "Hannah VanEvery and colleagues, Nature Reviews Genetics",
+      "revised": "2023-02; online 2022",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36198908/",
+      "whyUseful": "Describes temporal variation, study design, and causal-inference difficulties.",
+      "accessStatus": "PubMed metadata and abstract accessed; full review was not read. Do not claim full-text verification.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S13",
+      "title": "Creativity and Innovation Under Constraints: A Cross-Disciplinary Integrative Review",
+      "author": "Oguz A. Acar, Murat Tarakci, Daan van Knippenberg",
+      "revised": "2019",
+      "url": "https://openaccess.city.ac.uk/id/eprint/20459/",
+      "whyUseful": "Synthesizes why different constraints can help or hinder creativity.",
+      "accessStatus": "University repository abstract and article metadata accessed; manuscript download is linked.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S14",
+      "title": "Does Incubation Enhance Problem Solving? A Meta-Analytic Review",
+      "author": "Ut Na Sio and Thomas C. Ormerod",
+      "revised": "2009-01",
+      "url": "https://openresearch.surrey.ac.uk/esploro/outputs/journalArticle/Does-incubation-enhance-problem-solving-A/99512444302346",
+      "whyUseful": "Reports average incubation benefits and important task/preparation moderators.",
+      "accessStatus": "University repository abstract and metadata accessed; not a claim that every break improves creativity.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S15",
+      "title": "Atypical Combinations and Scientific Impact",
+      "author": "Brian Uzzi, Satyam Mukherjee, Michael Stringer, Ben Jones",
+      "revised": "2013",
+      "url": "https://www.kellogg.northwestern.edu/academics-research/research/detail/2013/atypical-combinations-and-scientific-impact/",
+      "whyUseful": "Links conventional foundations plus unusual combinations to citation impact in an observational scientific-paper study.",
+      "accessStatus": "Author institution research summary accessed; findings concern scientific papers, not a universal creativity law.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S16",
+      "title": "The Tell-Tale Heart",
+      "author": "Edgar Allan Poe; hosted by The Poe Museum",
+      "revised": "1843, original story",
+      "url": "https://poemuseum.org/the-tell-tale-heart/",
+      "whyUseful": "Primary text for contradictions between a narrator's claims and reported behavior.",
+      "accessStatus": "Primary story text accessed. Story includes murder; no graphic quotation reproduced.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S17",
+      "title": "The Story of an Hour",
+      "author": "Kate Chopin; hosted by Virginia Commonwealth University",
+      "revised": "1894, original story",
+      "url": "https://archive.vcu.edu/english/engweb/webtexts/hour/",
+      "whyUseful": "Primary text for focalization, irony, and competing interpretations of freedom.",
+      "accessStatus": "Full primary story accessed. Discussion contains ending spoilers.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S18",
+      "title": "Metamorphosis, translated by David Wyllie",
+      "author": "Franz Kafka; Project Gutenberg edition",
+      "revised": "1915, original novella; translation date not established",
+      "url": "https://www.gutenberg.org/ebooks/5200",
+      "whyUseful": "Primary work for identity, work, dependence, and conditional belonging.",
+      "accessStatus": "Catalog and linked text accessed. This translation is explicitly copyrighted; link to it, do not copy it into the app. Ending spoilers.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S19",
+      "title": "Film Analysis, Part 3: Cinematography",
+      "author": "Yale Film Studies",
+      "revised": "Date not established",
+      "url": "https://filmanalysis.yale.edu/cinematography/",
+      "whyUseful": "Defines framing, camera angle, focus, and camera movement with examples.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S20",
+      "title": "Film Analysis, Part 4: Editing",
+      "author": "Yale Film Studies",
+      "revised": "Date not established",
+      "url": "https://filmanalysis.yale.edu/editing/",
+      "whyUseful": "Explains continuity, juxtaposition, transitions, duration, and editing styles.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S21",
+      "title": "Film Analysis, Part 5: Sound",
+      "author": "Yale Film Studies",
+      "revised": "Date not established",
+      "url": "https://filmanalysis.yale.edu/sound/",
+      "whyUseful": "Distinguishes sound source, story-world status, and temporal relationships.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S22",
+      "title": "Improving Students' Learning With Effective Learning Techniques",
+      "author": "John Dunlosky, Katherine Rawson, Elizabeth Marsh, Mitchell Nathan, Daniel Willingham; APS",
+      "revised": "2013-01-07",
+      "url": "https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html",
+      "whyUseful": "Research report landing page comparing learning techniques.",
+      "accessStatus": "APS overview accessed; linked journal PDF was blocked. Use S23 for the accessible institutional account of findings.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S23",
+      "title": "All Study Strategies Not Created Equal, According to Kent State Researchers",
+      "author": "Kent State University, Department of Psychological Sciences",
+      "revised": "2013",
+      "url": "https://www.kent.edu/psychology/all-study-strategies-not-created-equal-according-kent-state-researchers",
+      "whyUseful": "Author institution account of the practice-testing and distributed-practice findings.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S24",
+      "title": "The Framing of Decisions and the Psychology of Choice",
+      "author": "Amos Tversky and Daniel Kahneman",
+      "revised": "1981-01-30",
+      "url": "https://stanford.edu/class/psych205/papers/Tversky-Kahneman-1981.pdf",
+      "whyUseful": "Original experiments on changes in choice under equivalent gain/loss descriptions.",
+      "accessStatus": "Original six-page paper accessed through Stanford course materials.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S25",
+      "title": "Opinions and Social Pressure",
+      "author": "Solomon E. Asch",
+      "revised": "1955-11",
+      "url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Influence_Compliance/Asch_1955_Opinions_and_social_pressure.pdf",
+      "whyUseful": "Original account of conformity experiments, including the importance of unanimity.",
+      "accessStatus": "Original paper accessed through MIT course materials; historical study has sampling and setting limits.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S26",
+      "title": "Creating a Successful Strategy",
+      "author": "Harvard Business School, Institute for Strategy and Competitiveness",
+      "revised": "Date not established",
+      "url": "https://www.isc.hbs.edu/strategy/creating-a-successful-strategy/Pages/default.aspx",
+      "whyUseful": "Introduces distinctive activity systems, trade-offs, and fit.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S27",
+      "title": "Making Strategic Trade-offs",
+      "author": "Harvard Business School, Institute for Strategy and Competitiveness",
+      "revised": "Date not established",
+      "url": "https://www.isc.hbs.edu/strategy/creating-a-successful-strategy/Pages/making-strategic-trade-offs.aspx",
+      "whyUseful": "Provides a concrete explanation of why credible strategies involve choices.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S28",
+      "title": "What Are Network Effects?",
+      "author": "Harvard Business School Online",
+      "revised": "2020",
+      "url": "https://online.hbs.edu/blog/post/what-are-network-effects",
+      "whyUseful": "Distinguishes direct and indirect network effects and explains platform value.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S29",
+      "title": "3.2 Calculate a Break-Even Point in Units and Dollars",
+      "author": "OpenStax, Principles of Accounting Volume 2: Managerial Accounting",
+      "revised": "2019, textbook",
+      "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars",
+      "whyUseful": "Provides the contribution-margin and fixed-cost logic behind break-even.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S30",
+      "title": "Warby Parker Inc. Prospectus, Form 424B4",
+      "author": "Warby Parker Inc.; US SEC EDGAR",
+      "revised": "2021",
+      "url": "https://www.sec.gov/Archives/edgar/data/1504776/000162828021019236/warbyparkerinc424b4.htm",
+      "whyUseful": "Real disclosure showing that companies define acquisition and customer metrics specifically.",
+      "accessStatus": "Primary filing accessed; historical example, not an analysis of current company performance.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S31",
+      "title": "Printing: China in 1000 CE",
+      "author": "Columbia University, Asia for Educators",
+      "revised": "Date not established",
+      "url": "https://afe.easia.columbia.edu/songdynasty-module/tech-printing.html",
+      "whyUseful": "Places European printing in the longer history of East Asian printing and movable type.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S32",
+      "title": "The Gutenberg Bible",
+      "author": "Library of Congress, Bible Collection",
+      "revised": "Date not established",
+      "url": "https://www.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
+      "whyUseful": "European artifact and printing context; useful alongside the East Asian history.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S33",
+      "title": "Why the Industrial Revolution Was British: Commerce, Induced Invention, and the Scientific Revolution",
+      "author": "Robert C. Allen",
+      "revised": "2011-04-12",
+      "url": "https://doi.org/10.1111/j.1468-0289.2010.00532.x",
+      "whyUseful": "Presents the high-wage/cheap-energy induced-invention explanation.",
+      "accessStatus": "Publisher metadata and abstract accessed; full article access may require a subscription.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S34",
+      "title": "Kenneth Pomeranz",
+      "author": "American Historical Association",
+      "revised": "Date not established",
+      "url": "https://www.historians.org/person/kenneth-pomeranz/",
+      "whyUseful": "Scholarly account of The Great Divergence argument, regional comparison, coal, and colonial resources.",
+      "accessStatus": "Expert institutional profile accessed; account of Pomeranz's thesis, not the full book.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S35",
+      "title": "Partition of 1947 Continues to Haunt India, Pakistan",
+      "author": "Stanford University, Stanford Report",
+      "revised": "2019-03",
+      "url": "https://news.stanford.edu/stories/2019/03/partition-1947-continues-haunt-india-pakistan-stanford-scholar-says",
+      "whyUseful": "Scholarly discussion of Partition and the value of oral history.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S36",
+      "title": "Collections and Oral History Resources",
+      "author": "The 1947 Partition Archive",
+      "revised": "Date not established",
+      "url": "https://www.1947partitionarchive.org/",
+      "whyUseful": "Primary oral-history collection for choosing contrasting testimonies.",
+      "accessStatus": "Public collection gateway accessed; no individual testimony is represented as already watched or verified. Some archive access may require an application.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S37",
+      "title": "5.3 Elasticity and Pricing",
+      "author": "OpenStax, Principles of Economics 3e",
+      "revised": "2022, textbook",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/5-3-elasticity-and-pricing",
+      "whyUseful": "Connects price responsiveness with total revenue, rather than automatically with profit.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S38",
+      "title": "Unit 12: Markets, Efficiency, and Public Policy",
+      "author": "CORE Econ, The Economy 1.0",
+      "revised": "2017, textbook",
+      "url": "https://books.core-econ.org/the-economy-v1/book/text/12.html",
+      "whyUseful": "Explains external effects and institutional/policy responses.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S39",
+      "title": "Unit 4: Social Interactions",
+      "author": "CORE Econ, The Economy 1.0",
+      "revised": "2017, textbook",
+      "url": "https://books.core-econ.org/the-economy-v1/book/text/04.html",
+      "whyUseful": "Introduces payoffs, dominant strategies, social dilemmas, and repeated interaction.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S40",
+      "title": "Attention Is All You Need",
+      "author": "Ashish Vaswani and seven coauthors, Google Research / NIPS",
+      "revised": "2017",
+      "url": "https://research.google/pubs/attention-is-all-you-need/",
+      "whyUseful": "Original Transformer architecture paper; architectural background, not a claim that all current AI uses this exact system.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S41",
+      "title": "AI RMF: Generative Artificial Intelligence Profile, NIST AI 600-1",
+      "author": "Chloe Autio and colleagues, NIST",
+      "revised": "2024-07-26",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "whyUseful": "Framework describing confabulation and other generative-AI risks.",
+      "accessStatus": "Institutional publication page and indexed report section checked; supplement is a risk framework, not an empirical model benchmark.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S42",
+      "title": "Datasets: Dividing the Original Dataset",
+      "author": "Google Machine Learning Crash Course",
+      "revised": "Date not established",
+      "url": "https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets",
+      "whyUseful": "Explains training, validation, test splits and repeated-test contamination.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S43",
+      "title": "Overfitting",
+      "author": "Google Machine Learning Crash Course",
+      "revised": "Date not established",
+      "url": "https://developers.google.com/machine-learning/crash-course/overfitting/overfitting",
+      "whyUseful": "Distinguishes fitting training examples from generalizing to new ones.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S44",
+      "title": "Deep Neural Networks for YouTube Recommendations",
+      "author": "Paul Covington, Jay Adams, Emre Sargin",
+      "revised": "2016",
+      "url": "https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/",
+      "whyUseful": "Primary historical description of candidate generation and ranking.",
+      "accessStatus": "Original authors' research page accessed; 2016 architecture is not evidence of how the current service works.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S45",
+      "title": "How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility",
+      "author": "Allison J. B. Chaney, Brandon M. Stewart, Barbara E. Engelhardt",
+      "revised": "2017 preprint; 2018 RecSys paper",
+      "url": "https://arxiv.org/abs/1710.11214",
+      "whyUseful": "Simulation research on feedback between recommendation exposure and future training data.",
+      "accessStatus": "Author preprint accessed; simulation findings are not universal causal estimates for live platforms.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S46",
+      "title": "Social Norms",
+      "author": "Stanford Encyclopedia of Philosophy",
+      "revised": "2018-09-24, substantive revision",
+      "url": "https://plato.stanford.edu/entries/social-norms/",
+      "whyUseful": "Explains expectations, social rules, and pluralistic ignorance.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S47",
+      "title": "Social Capital I: Measurement and Associations With Economic Mobility",
+      "author": "Raj Chetty and colleagues, Opportunity Insights / Nature",
+      "revised": "2022-08",
+      "url": "https://opportunityinsights.org/paper/social-capital-i-measurement-and-associations-with-economic-mobility/",
+      "whyUseful": "Distinguishes connectedness, cohesion, and civic engagement in US data.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S48",
+      "title": "Social Capital II: Determinants of Economic Connectedness",
+      "author": "Raj Chetty and colleagues, Opportunity Insights / Nature",
+      "revised": "2022-08",
+      "url": "https://opportunityinsights.org/paper/social-capital-ii-determinants-of-economic-connectedness/",
+      "whyUseful": "Distinguishes exposure to other socioeconomic groups from friendship formation conditional on exposure.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S49",
+      "title": "Ostrom Design Principles",
+      "author": "Ostrom Workshop, Indiana University",
+      "revised": "Date not established",
+      "url": "https://ostrom.indiana.edu/courses-teaching/teaching-tools/ostrom-design/index.html",
+      "whyUseful": "Accessible institutional guide to boundaries, monitoring, sanctions, and local governance.",
+      "accessStatus": "Public webpage accessed; no specialist peer review of this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    },
+    {
+      "id": "S50",
+      "title": "Design Principles and Threats to Sustainable Organizations That Manage Commons",
+      "author": "Elinor Ostrom; Indiana University Digital Library of the Commons",
+      "revised": "1999",
+      "url": "https://dlc.dlib.indiana.edu/dlc/items/269a8cb1-79ca-47c6-acd6-7fa2641a6507",
+      "whyUseful": "Original author paper repository, useful for moving beyond a simple state-versus-market dichotomy.",
+      "accessStatus": "Repository metadata and abstract located; full paper should be checked before expanding the lesson beyond this brief.",
+      "checkedAt": "2026-10-17",
+      "type": "Research reference"
+    }
+  ]
+}

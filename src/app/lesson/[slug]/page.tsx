@@ -15,15 +15,14 @@ export default async function LessonPage({
         ← Library
       </a>
       <div className="eyebrow" style={{ marginTop: 24 }}>
-        {lesson.subject} · {lesson.minutes} min · Draft ·{" "}
-        {lesson.sources.length
-          ? "Source claims awaiting review"
-          : "Sources pending research"}
+        {lesson.subject} · {lesson.minutes} min read · Research draft · Subject
+        review pending
       </div>
-      <h1>{lesson.question}</h1>
+      <h1>{lesson.title}</h1>
+      <p className="lead">{lesson.question}</p>
       <div className="row">
         <a className="button" href={`/discuss/${slug}`}>
-          Discuss draft lesson →
+          Discuss research brief →
         </a>
         <a className="button secondary" href="#practice">
           Written practice
@@ -31,7 +30,7 @@ export default async function LessonPage({
       </div>
       <div className="two section">
         <article className="panel lesson-copy">
-          <h2>{lesson.title}</h2>
+          <h2>Understand the idea</h2>
           {lesson.explanation.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -42,10 +41,7 @@ export default async function LessonPage({
           <h3>Connect it</h3>
           <p>{lesson.connection}</p>
           <h3>Go deeper</h3>
-          <p>
-            Identify one assumption you would test before using this idea in a
-            new setting.
-          </p>
+          <p>{lesson.reviewLater}</p>
           <h3>Sources</h3>
           {lesson.sources.length === 0 && (
             <p className="muted">
@@ -58,7 +54,7 @@ export default async function LessonPage({
                 {s.title} ↗
               </a>
               <p>
-                {s.author} · {s.type} · Revised {s.revised}
+                {s.author} · {s.type} · Date: {s.revised}
               </p>
               <p>{s.whyUseful}</p>
               <small>
@@ -77,10 +73,9 @@ export default async function LessonPage({
             </ul>
             <p className="muted">
               Prerequisite:{" "}
-              {lesson.title === "Arguments and reasons" ||
-              lesson.title === "Evidence and hypotheses"
+              {lesson.stage === "foundation"
                 ? "None"
-                : "Previous lesson in this path"}
+                : "Previous topic in this path"}
             </p>
           </div>
           <LessonActions slug={slug} />
