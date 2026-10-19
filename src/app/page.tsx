@@ -1,5 +1,6 @@
 import { lessons, paths } from "@/lib/curriculum";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { BillingPlan } from "@/components/BillingPlan";
 export default function Home() {
   return (
     <>
@@ -29,23 +30,7 @@ export default function Home() {
           <WaitlistForm />
         </div>
         <div className="panel" id="pricing">
-          <div className="eyebrow">Membership plan</div>
-          <h2>
-            ₹499 <span className="price-period">/ month</span>
-          </h2>
-          <p>Monthly access to Depth Lab when paid membership launches.</p>
-          <p className="muted">
-            Payment gateway integration is coming next. Subscriptions and
-            charges are not available yet.
-          </p>
-          <button className="button" type="button" disabled>
-            Pay ₹499/month · Coming soon
-          </button>
-          <p>
-            <a href="#waitlist">
-              <strong>Join the waitlist for launch updates →</strong>
-            </a>
-          </p>
+          <BillingPlan />
         </div>
       </section>
       <section className="section">

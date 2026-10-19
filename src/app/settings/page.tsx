@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useAccount, authHeader } from "@/components/Providers";
+import { BillingSettings } from "@/components/BillingSettings";
 export default function Settings() {
   const { user, db } = useAccount();
   const [msg, setMsg] = useState("");
@@ -89,6 +90,7 @@ export default function Settings() {
               this app cannot enforce their spending caps.
             </p>
           </div>
+          <BillingSettings />
           <div className="panel section">
             <h3>What is stored</h3>
             <p>
