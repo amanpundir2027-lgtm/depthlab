@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import { authHeader, useAccount } from "@/components/Providers";
 
 type Subscription = {
+  provider: string;
   status: string;
-  paid_count: number;
-  total_count: number;
   current_end: string | null;
   cancel_at_cycle_end: boolean;
 };
@@ -66,7 +65,7 @@ export function BillingSettings() {
       <h3>Membership billing</h3>
       {loading ? <p>Loading billing status…</p> : subscription ? (
         <>
-          <p>Status: <strong>{subscription.status}</strong>. Payments completed: {subscription.paid_count} of {subscription.total_count}.</p>
+          <p>Provider: {subscription.provider === "dodo" ? "Dodo Payments" : "Razorpay"}. Status: <strong>{subscription.status}</strong>.</p>
           {subscription.current_end && <p>Current billing period ends {new Date(subscription.current_end).toLocaleDateString()}.</p>}
           {subscription.cancel_at_cycle_end && <p>Cancellation is scheduled for the end of this billing period.</p>}
           {subscription.status === "active" && !subscription.cancel_at_cycle_end && (

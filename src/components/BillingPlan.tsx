@@ -6,9 +6,8 @@ import { authHeader, useAccount } from "@/components/Providers";
 type BillingStatus = {
   enabled: boolean;
   subscription: null | {
+    provider: string;
     status: string;
-    paid_count: number;
-    total_count: number;
     current_end: string | null;
     cancel_at_cycle_end: boolean;
   };
@@ -60,7 +59,7 @@ export function BillingPlan() {
       ) : billing?.enabled ? (
         user ? (
           <button className="button" type="button" disabled={busy} onClick={checkout}>
-            {busy ? "Opening checkout…" : "Subscribe for ₹499/month"}
+            {busy ? "Opening checkout…" : status === "pending" ? "Continue checkout" : "Subscribe for ₹499/month"}
           </button>
         ) : (
           <a className="button" href="/login">Sign in to subscribe</a>

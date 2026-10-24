@@ -1,76 +1,75 @@
-import { createHmac, timingSafeEqual } from "node:crypto";
+import DodoPayments from "dodopayments";
 
 export const MONTHLY_AMOUNT_PAISE = 49900;
-export const MONTHLY_PLAN = "monthly_499_inr";
 export const BILLING_CYCLES = 12;
 
 export function billingConfigured() {
   return (
     process.env.BILLING_ENABLED === "true" &&
-    !!process.env.RAZORPAY_KEY_ID &&
-    !!process.env.RAZORPAY_KEY_SECRET &&
-    !!process.env.RAZORPAY_PLAN_ID &&
-    !!process.env.RAZORPAY_WEBHOOK_SECRET
+    !!process.env.DODO_PAYMENTS_API_KEY &&
+    !!process.env.DODO_PAYMENTS_PRODUCT_ID &&
+    !!process.env.DODO_PAYMENTS_WEBHOOK_SECRET &&
+    ["test_mode", "live_mode"].includes(process.env.DODO_PAYMENTS_ENVIRONMENT || "")
   );
 }
 
-export function validWebhookSignature(body: string, signature: string | null) {
-  const secret = process.env.RAZORPAY_WEBHOOK_SECRET;
-  if (!secret || !signature || !/^[a-f\d]{64}$/i.test(signature)) return false;
-  const actual = Buffer.from(signature, "hex");
-  const expected = createHmac("sha256", secret).update(body).digest();
-  return actual.length === expected.length && timingSafeEqual(actual, expected);
+export function dodoClient() {
+  const bearerToken = process.env.DODO_PAYMENTS_API_KEY;
+  const environment = process.env.DODO_PAYMENTS_ENVIRONMENT;
+  if (!bearerToken || (environment !== "test_mode" && environment !== "live_mode"))
+    throw new Error("Dodo Payments is not configured.");
+  return new DodoPayments({ bearerToken, environment, maxRetries: 1, timeout: 12_000 });
 }
 
-export type RazorpaySubscription = {
-  id: string;
-  status: string;
-  plan_id: string;
-  short_url?: string;
-  paid_count?: number;
-  total_count?: number;
-  current_end?: number | null;
-  has_scheduled_changes?: boolean;
-};
-
-export async function razorpay<T>(path: string, init: RequestInit = {}): Promise<T> {
-  const key = process.env.RAZORPAY_KEY_ID;
-  const secret = process.env.RAZORPAY_KEY_SECRET;
-  if (!key || !secret) throw new Error("Razorpay is not configured.");
-  const response = await fetch(`https://api.razorpay.com/v1/${path}`, {
-    ...init,
-    headers: {
-      Authorization: `Basic ${Buffer.from(`${key}:${secret}`).toString("base64")}`,
-      "Content-Type": "application/json",
-      ...init.headers,
-    },
-    cache: "no-store",
-  });
-  if (!response.ok) throw new Error(`Razorpay request failed (${response.status}).`);
-  return (await response.json()) as T;
+export function validDodoProduct(product: DodoPayments.Product) {
+  const price = product.price;
+  return (
+    product.product_id === process.env.DODO_PAYMENTS_PRODUCT_ID &&
+    product.is_recurring &&
+    price.type === "recurring_price" &&
+    price.currency === "INR" &&
+    price.price === MONTHLY_AMOUNT_PAISE &&
+    price.payment_frequency_count === 1 &&
+    price.payment_frequency_interval === "Month" &&
+    price.subscription_period_count === BILLING_CYCLES &&
+    price.subscription_period_interval === "Month" &&
+    price.tax_inclusive === true &&
+    (price.trial_period_days || 0) === 0 &&
+    (price.discount_bps || 0) === 0 &&
+    (price.discount || 0) === 0 &&
+    !price.purchasing_power_parity
+  );
 }
 
-export function isRazorpayCheckoutUrl(value: unknown): value is string {
+export function isDodoCheckoutUrl(value: unknown): value is string {
   if (typeof value !== "string") return false;
   try {
     const url = new URL(value);
     return url.protocol === "https:" &&
-      (url.hostname === "rzp.io" || url.hostname.endsWith(".razorpay.com"));
+      (url.hostname === "dodopayments.com" || url.hostname.endsWith(".dodopayments.com"));
   } catch {
     return false;
   }
 }
 
-export function subscriptionUpdate(subscription: RazorpaySubscription) {
+export function validDodoSubscription(subscription: DodoPayments.Subscription) {
+  return (
+    subscription.product_id === process.env.DODO_PAYMENTS_PRODUCT_ID &&
+    subscription.currency === "INR" &&
+    subscription.payment_frequency_count === 1 &&
+    subscription.payment_frequency_interval === "Month" &&
+    subscription.subscription_period_count === BILLING_CYCLES &&
+    subscription.subscription_period_interval === "Month" &&
+    subscription.tax_inclusive === true
+  );
+}
+
+export function subscriptionUpdate(subscription: DodoPayments.Subscription) {
   return {
+    provider_subscription_id: subscription.subscription_id,
     status: subscription.status,
-    paid_count: subscription.paid_count ?? 0,
-    current_end: subscription.current_end
-      ? new Date(subscription.current_end * 1000).toISOString()
-      : null,
-    ...(subscription.has_scheduled_changes === undefined
-      ? {}
-      : { cancel_at_cycle_end: subscription.has_scheduled_changes }),
+    current_end: subscription.next_billing_date || null,
+    cancel_at_cycle_end: subscription.cancel_at_next_billing_date,
     updated_at: new Date().toISOString(),
   };
 }

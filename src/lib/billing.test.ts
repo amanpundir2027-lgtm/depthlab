@@ -1,27 +1,28 @@
-import { createHmac } from "node:crypto";
 import { afterEach, describe, expect, it } from "vitest";
-import { isRazorpayCheckoutUrl, validWebhookSignature } from "./billing";
+import { isDodoCheckoutUrl, validDodoProduct } from "./billing";
+import type DodoPayments from "dodopayments";
 
-const oldSecret = process.env.RAZORPAY_WEBHOOK_SECRET;
-afterEach(() => { process.env.RAZORPAY_WEBHOOK_SECRET = oldSecret; });
+const oldProduct = process.env.DODO_PAYMENTS_PRODUCT_ID;
+afterEach(() => { process.env.DODO_PAYMENTS_PRODUCT_ID = oldProduct; });
 
-describe("Razorpay webhook verification", () => {
-  it("accepts only a signature of the exact raw body", () => {
-    process.env.RAZORPAY_WEBHOOK_SECRET = "test-secret";
-    const body = '{"event":"subscription.activated"}';
-    const signature = createHmac("sha256", "test-secret").update(body).digest("hex");
-    expect(validWebhookSignature(body, signature)).toBe(true);
-    expect(validWebhookSignature(body + " ", signature)).toBe(false);
-    expect(validWebhookSignature(body, "invalid")).toBe(false);
-    expect(validWebhookSignature(body, null)).toBe(false);
+describe("Dodo checkout validation", () => {
+  it("only redirects to Dodo hosted URLs", () => {
+    expect(isDodoCheckoutUrl("https://checkout.dodopayments.com/session")).toBe(true);
+    expect(isDodoCheckoutUrl("https://dodopayments.com.evil.example/session")).toBe(false);
+    expect(isDodoCheckoutUrl("http://checkout.dodopayments.com/session")).toBe(false);
   });
-});
 
-describe("hosted checkout URL", () => {
-  it("rejects redirects outside Razorpay", () => {
-    expect(isRazorpayCheckoutUrl("https://rzp.io/i/example")).toBe(true);
-    expect(isRazorpayCheckoutUrl("https://api.razorpay.com/example")).toBe(true);
-    expect(isRazorpayCheckoutUrl("https://rzp.io.evil.example/")).toBe(false);
-    expect(isRazorpayCheckoutUrl("http://rzp.io/i/example")).toBe(false);
+  it("rejects a product with a different billing term or amount", () => {
+    process.env.DODO_PAYMENTS_PRODUCT_ID = "pdt_example";
+    const product = {
+      product_id: "pdt_example", is_recurring: true,
+      price: { type: "recurring_price", currency: "INR", price: 49900,
+        payment_frequency_count: 1, payment_frequency_interval: "Month",
+        subscription_period_count: 12, subscription_period_interval: "Month",
+        tax_inclusive: true },
+    } as unknown as DodoPayments.Product;
+    expect(validDodoProduct(product)).toBe(true);
+    expect(validDodoProduct({ ...product, price: { ...product.price, price: 59900 } } as DodoPayments.Product)).toBe(false);
+    expect(validDodoProduct({ ...product, price: { ...product.price, subscription_period_count: 1 } } as DodoPayments.Product)).toBe(false);
   });
 });

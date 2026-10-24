@@ -9,7 +9,7 @@ export async function GET(req: Request) {
   if (!db) return Response.json({ enabled: false, subscription: null });
   const { data, error } = await db
     .from("billing_subscriptions")
-    .select("status,paid_count,total_count,current_end,cancel_at_cycle_end,created_at")
+    .select("provider,status,current_end,cancel_at_cycle_end,created_at")
     .eq("user_id", auth.user.id)
     .order("created_at", { ascending: false })
     .limit(1)
