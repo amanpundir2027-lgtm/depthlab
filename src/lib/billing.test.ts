@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { isDodoCheckoutUrl, validDodoProduct } from "./billing";
+import { isDodoCheckoutUrl, validDodoProduct, validPaidCheckout } from "./billing";
 import type DodoPayments from "dodopayments";
 
 const oldProduct = process.env.DODO_PAYMENTS_PRODUCT_ID;
@@ -24,5 +24,15 @@ describe("Dodo checkout validation", () => {
     expect(validDodoProduct(product)).toBe(true);
     expect(validDodoProduct({ ...product, price: { ...product.price, price: 59900 } } as DodoPayments.Product)).toBe(false);
     expect(validDodoProduct({ ...product, price: { ...product.price, subscription_period_count: 1 } } as DodoPayments.Product)).toBe(false);
+  });
+
+  it("only links an exact paid ₹499 checkout to a subscription", () => {
+    const payment = { status: "succeeded", charge_type: "new",
+      checkout_session_id: "cks_example", currency: "INR",
+      total_amount: 49900, subscription_ids: ["sub_example"] } as unknown as DodoPayments.Payment;
+    expect(validPaidCheckout(payment)).toBe(true);
+    expect(validPaidCheckout({ ...payment, total_amount: 499 } as DodoPayments.Payment)).toBe(false);
+    expect(validPaidCheckout({ ...payment, status: "processing" } as DodoPayments.Payment)).toBe(false);
+    expect(validPaidCheckout({ ...payment, checkout_session_id: null } as DodoPayments.Payment)).toBe(false);
   });
 });

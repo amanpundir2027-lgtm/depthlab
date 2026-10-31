@@ -64,6 +64,17 @@ export function validDodoSubscription(subscription: DodoPayments.Subscription) {
   );
 }
 
+export function validPaidCheckout(payment: DodoPayments.Payment) {
+  return (
+    payment.status === "succeeded" &&
+    payment.charge_type === "new" &&
+    !!payment.checkout_session_id &&
+    payment.currency === "INR" &&
+    payment.total_amount === MONTHLY_AMOUNT_PAISE &&
+    payment.subscription_ids.length === 1
+  );
+}
+
 export function subscriptionUpdate(subscription: DodoPayments.Subscription) {
   return {
     provider_subscription_id: subscription.subscription_id,
